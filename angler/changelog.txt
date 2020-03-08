@@ -1,247 +1,355 @@
 ====================
-     02-17-2020
+     03-08-2020
 ====================
 
 
-   * device/aosip/sepolicy/
-5cc7823 aosip: common: add rules for RGB/HSL accentpicker
+   * device/generic/goldfish/
+9cf803e Merge tag 'android-10.0.0_r31' into lineage-17.1-android-10.0.0_r31
 
    * device/huawei/angler/
-51d1d84 update privapp-permissions-angler.xml
-49798a6 librmnetctl: Use generated kernel headers
+e27ca59 update sepolicy
 
-   * frameworks/base/
-1a1ccf9 Process: Use audio-app cpuset if available
-9ed04cc Update issue templates
+   * hardware/qcom/audio/
+722c28c Merge tag 'android-10.0.0_r31' into lineage-17.1-android-10.0.0_r31
 
    * hardware/qcom/display/
-dba76dd Use LOCAL_VENDOR_MODULE
-754394b hwc: Move mdpHw declaration under DYNAMIC_FPS flag  - As this variable is used only when DYNAMIC_FPS is defined so  move this declaration under it.
-0b85688 hwc: Trigger dynamic refresh-rate change for more usecases * Until now it's been the case that refresh-rates were set to the standard values of 24, 30, 48 and 60 for video playback usecases. Since of the most panel vendors can only support refresh-rates above 45, in many of the use-cases with fps < 45, dynamic change in panel refresh rate doesn't happen.
-7f49a25 msm8994: adjust for clang on Q
+4510f2d Use LOCAL_VENDOR_MODULE
+c440d2b hwc: Move mdpHw declaration under DYNAMIC_FPS flag  - As this variable is used only when DYNAMIC_FPS is defined so  move this declaration under it.
+30e6282 hwc: Trigger dynamic refresh-rate change for more usecases * Until now it's been the case that refresh-rates were set to the standard values of 24, 30, 48 and 60 for video playback usecases. Since of the most panel vendors can only support refresh-rates above 45, in many of the use-cases with fps < 45, dynamic change in panel refresh rate doesn't happen.
+fbd536d msm8994: adjust for clang on Q
+d18dd5f Merge tag 'android-10.0.0_r31' into lineage-17.1-android-10.0.0_r31
 
-   * vendor/huawei/
-dd844c3 remove privapp-permissions-angler.xml
+   * hardware/qcom/gps/
+531e527 Return the correct length of nmea sentence
+3e52160 Fix logging level and remove nmea log
+c6492de Move device dependent modules to /vendor
+360e458 Cleanup obsolete LOCAL_PRELINK_MODULE
+
+   * hardware/qcom/media/
+a087f09 media: Add missing links
+e484f0e Merge tag 'android-10.0.0_r31' into lineage-17.1-android-10.0.0_r31
+
+   * packages/apps/DerpQuest/
+0a056e7 DerpQuest: Update Italian translation
 
 ====================
-     02-16-2020
+     03-07-2020
 ====================
 
 
    * build/make/
-4a8f36c Make allmod() and pathmod() py3 compatible
-5aaf1c1 releasetools: Use the first entry of a mount point when reading fstab
-7c34117 releasetools: Add script to sign zips
-0b9a1cd releasetools: support reading release keys out of some sort of command
+e42d93d Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/build into ten
+
+   * build/soong/
+7227d32 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/build/soong into HEAD
+
+   * development/
+7998677 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/development into HEAD
 
    * device/huawei/angler/
-26fc0ae I'm DerpFest
-04c1398 Reserve 128MB for critical system components.
-e3996d8 Drop external camera config
-da3e15c doze: Fix dark theme issues
-6dfd309 Enable USB debugging at boot
-3d51651 Convert Android.mk to Android.bp *Add 'vendor.' prefix to a vendor HAL service name *Taken from shamu
-53a13dd wait bootdevice on fs
-8052b35 Change swap on timing
-
-   * device/qcom/sepolicy-legacy-um/
-786d76c Merge branch 'ten-legacy-um' of https://github.com/AOSiP/device_qcom_sepolicy into ten-legacy-um
+c483dbf Drop ro.surface_flinger.protected_contents prop
+48480bd fix config_defaultPinnerServiceFiles
+9eedbc6 Start qseecom daemon as early as possible for FBE
+9ead13b update sepolicy
+7ae4557 update sepolicy
+9e916ba update sepolicy
+b88e7b6 update sepolicy
+cc4f64a IDC
+16a2d64 angler: prebuilt keystore
+ae4437a Telephony: Move qti-telephony-common to product
+bcf0167 Telephony: Add telephony_injection file
+594777c IMS: decouple ims-ext-common from boot jars
+38649a7 Remove hidden API references in ims.apk
+e1b283d Add support for telephony hidl wrapper
+39c4601 remove ims-ext-common_system
+985463d Revert "Switch to hwbinder camera provider"
+9428d1c Add BOARD_PLAT_PRIVATE_SEPOLICY_DIR
+05c08d2 update sepolicy
+fcc6a4f update sepolicy
+8f64396 add sysfs_disk_stat label
+9dc8695 sepolicy update thermal@2.0-service label
+0e8000b sepolicy update power@1.2-service label
+8575a3f angler-common: enforcing bringup for 10
+a3cf7b2 update privapp-permissions-angler.xml
+01ef1be I'm DerpFest
+774708d Reserve 128MB for critical system components.
+8db68fb Drop external camera config
+3b38d23 doze: Fix dark theme issues
+fdea5be Enable USB debugging at boot
+8e2c1ce Convert Android.mk to Android.bp *Add 'vendor.' prefix to a vendor HAL service name *Taken from shamu
+2820379 Set runtime readahead to 128KiB
+a4e9b55 init.common.rc: wait for bootdevice symbolic creation
+f4d345c wait bootdevice on fs
+d29b8c5 enable zram on boot_complete
+fff07fd Bump ufs read ahead size to 512KB to improve app launch time
+144fcd0 Remove starting servicemanagers
+bc8f61c init: Start servicemanagers early
+2397220 start qseecomd early
+91554ce configstore: uprev configstore (1.0 -> 1.1)
+8e8c783 Add 'vendor.' prefix to a vendor HAL service name
+f8d5d05 Wait for hwservicemanager ready before running fsck
+9431aa4 Move setprop vold.post_fs_data_done to the end of the section
+4d9bc47 Make sure graphics HAL services started before mounting data
+d8601c0 Start hwservicemanager early
+3b05096 start bootanim before mounting data
+deda152 Sync dexpreopt options with nile-common
+77bd466 move wifi interface to prop
+32b9a6e add manifest to deprecated
+74aff3a Enable radio service 1.1
+51b489c add manifest to radio
+446cc5d Enable VoLTE/VoWIFI for all indian cariers
+8189a6d Enable VoLTE for Airtel/Vodafone India
+4dbd95e Update CarrierConfig overlay from LA.UM.8.6.r1-02900-89xx.0
+9982aab Correctly set up WiFi direct supplicant configuration
+11d20ab Move wpa_supplicant global socket to @android:vendor_wpa_wlan0
+c731e76 move bcmdhd.cal to vendor
+016dfad Update to power HAL 1.2
+63caae2 Modified for angler
+ebb28b4 import vendor_qcom_opensource_power from https://github.com/LineageOS/android_vendor_qcom_opensource_power/commit/c9ed433d24c2807a33a25ed42ec57526063ac127
+8c603fe remove power
+b193543 Add /apex/com.android.runtime/${LIB} to runtime search path.
+b1229b0 Fix the incorrect mtp property
+8825fb6 Set the sys.mtp.device_type property
+5a53999 Add CAP_SYS_BOOT for charger
+6d0d659 Change user/group permission for for charger
+7911ff6 Update charger service path and label
+3e4391c Stop the QC-QMI logspam
+252ad5b Fix lags on some Google wallpapers
+fa7bda1 Enable AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT
+ecd643a overlay: Enable config_fingerprintPostResetRunnableForAllClients
+870a9c7 Increase speaker gain
 
    * frameworks/base/
-6eda86c Settings: Add FOD icon picker settings values to backup
-2205088 base: Introduce RGB accenter [1/2]
-242a6c0 Use non-wakeup alarm for delay constraint.
-b8534d3 SettingsLib: mutate drawable before tinting for buildBtRainbowDrawable
-3bf8172 Keyguard: ReInflate views when density or font scale change
-537d40b base: Use ro.build.date to clear cache dirs on update
-91d8b40 Increase padding for notifs & qs panel
-4f40d08 SettingsLib: Don't show system overlays on apps list
-0079d14 Revert "SettingsLib: Don't show system overlays on apps list"
-b5c8f21 fwb: Remove old method for enabling setupwizard overlay
-6e1dc44 Dark theme twilight mode backend and tile
-5517be5 Fix nav bar leak in SystemUI
-3af58e9 RingtoneManager: Don't crash if the ringtone doesn't have a numerical ID
-be4ce7e ProgressBar: Media volume bar indicates a wrong value
-67fc8a0 SystemUI: Disable/Enable screenshot sound [1/2]
-121e6c2 Revert "[1/2] base: allow disable of screenshot shutter sound"
-78491de Merge pull request #44 from DarkDampSquib/ten
+639b279 lib/androidfw: Fix reversed logic
+ce99044 [frameworks][base] move -Wno-implicit-fallthrough from cflags to cppflags
+3d06c33 fw/b torch: Let long press power turn torch off when screen is on.
+5f6009c Pad ime_switcher same as navbar buttons
+c9d19d6 Revert "Remove keyguard_indication_area_overlay"
+af6fcd3 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/frameworks/base into ten
+d887fdb Revert "SystemUI: block gestural navigation when using partial screenshot"
+4df8656 Revert "SystemUI: implement better partial screenshot"
 
-   * hardware/aosip/interfaces/
-2d3dbcb aw2013: Fix typo in condition line
+   * frameworks/opt/telephony/
+5ecff34 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/frameworks/opt/telephony into HEAD
+
+   * hardware/libhardware/
+f716ee8 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/hardware/libhardware into HEAD
 
    * manifest/
-331600a Initial tracking for DerpFest
-aceaa0e manifest: track a couple more repos from lineage
+e652008 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/manifest into ten
+0f6d1ec Initial tracking for DerpFest
 
-   * packages/apps/DerpQuest/
-4bc33b9 DerpQuest: Move RGB accent picker to DerpQuest [2/2]
-1493691 Update complete Chinese Translations
-72cc02b Merge pull request #27 from DarkDampSquib/ten
+   * packages/apps/Bluetooth/
+f382d0d Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/Bluetooth into ten
 
-   * packages/apps/Settings/
-06df6bb Settings: Move RGB accent picker to DerpQuest [1/2]
-1da23c8 Introduce RGB accenter [2/2]
-3013794 DarkUIPreferenceController null exception
-5140aa7 Revert "Revert "Add settings for scheduling dark theme""
-a3d3b34 Settings: Fix QRCamera crash
-fd552ba Bug:PreferredNetworkModePreferenceController.java not being refreshed
-cff996d Settings: Disable/Enable screenshot sound [2/2]
-bb17486 Revert "[2/2] Settings: allow disable of screenshot shutter sound"
-5479c72 Screensaver: Tint button to match system theme
-24f64d5 Settings: Add support to open device maintainer's telegram * Do this by overlaying on top of <string name="maintainer_telegram"> in aosip_strings.xml
+   * packages/apps/CarrierConfig/
+12ca1d7 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/CarrierConfig into HEAD
+
+   * packages/apps/CellBroadcastReceiver/
+51921e4 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver into HEAD
+
+   * packages/apps/CertInstaller/
+c01555f Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/CertInstaller into HEAD
+
+   * packages/apps/PhoneCommon/
+4df87cd Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/PhoneCommon into HEAD
 
    * packages/apps/ThemePicker/
-d74b757 ThemePicker: Remove accent color step * We have an RGB picker now
+e2ac2ba Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/ThemePicker into ten
+
+   * packages/apps/WallpaperPicker2/
+498f182 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/WallpaperPicker2 into HEAD
+
+   * packages/inputmethods/LatinIME/
+4277b4e Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/inputmethods/LatinIME into HEAD
 
    * packages/services/Telecomm/
-d623ee7 Telecomm: Phone ringtone setting for Multi SIM device [3/3]
-96a35fb Added features flash-call-on-waiting [2/3]
-035e804 Use double vibration on call hang-up
-7a364dc Add back increasing ring feature (1/3).
-98f76e5 Incall vibration options [2/3]
-7d534b6 Telecomm: Change font on some parts
+a37bc47 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/services/Telecomm into HEAD
+d80ac6b Merge remote-tracking branch 'derp/ten' into HEAD
 
    * packages/services/Telephony/
-bb0f328 Font improvements
-5f5318a Grant START_ACTIVITIES_FROM_BACKGROUND
-2461e21 LteTile: Fix network modes for 10
-074934e ToggleLte: Add missed LTE modes
-0a5912d ToggleLte: fix WCDMA only
-0e7fd5d ToggleLte: multisim compatibility
-d90dd5d Restore previous network value after toggleLTE
-8a718be Implement toggleLte
+95ca3b4 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/services/Telephony into ten
 
-   * vendor/aosip/
-fa8760f I stick to Community build forever.
-da5343c add angler
-1df7d1c vendor: Define isStatic argument on setupwizard overlay
-514bb8f kernel: allow devices to use newer GCC
-3f81358 kernel: remove x86 target support
-9443edc prebuilt: backuptool: Drop addond version check on A-only
+   * system/core/
+4c0ce05 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/system/core into HEAD
 
-   * vendor/overlay/
-79ddc8b Live captions: Have it follow system accent / fix up navbar
-37157e1 overlay: add EmptyOverlay
-afa7149 overlay: remove left over wallpaper after name change
-d2d604a overlay: open sdcard root when launching DocumentsUI
+   * system/vold/
+2dc8dfa Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/system/vold into HEAD
 
 ====================
-     02-15-2020
+     03-06-2020
 ====================
 
+   * art/
+545bc4e Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/art into HEAD
 
-   * frameworks/base/
-acc7a7f SystemUI: Add some Derp FOD icons [1/2]
-12b1a7f SystemUI: Add PureView recognizing FP animations [1/2]
-5877f85 Add OP Recognizing FP animations [1/2]
+   * bootable/recovery/
+6ed67ee Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/bootable/recovery into HEAD
 
-   * packages/apps/DerpQuest/
-5f230e5 DerpQuest: Add some Derp FOD icons [2/2]
-5041932 DerpQuest: Add PureView recognizing FP animations [2/2]
-7af69e2 DerpQuest: Add OP Recognizing FP animations [2/2]
+   * build/blueprint/
+a52ed00 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/build/blueprint into HEAD
 
-   * vendor/aosip/
-8b81780 vendor: version: Allow adding a timestamp to all build kinds by running
-
-   * vendor/qcom/opensource/interfaces/
-71518d8 Merge pull request #1 from op5-q/ten
-
-====================
-     02-14-2020
-====================
-
-
-====================
-     02-13-2020
-====================
-
-
-   * device/qcom/sepolicy-legacy/
-4fb8062 sepolicy: address netmgrd denials
-cca7bb4 sepolicy: Allow init to mounton system_file
-5addade sepolicy: Label /firmware(/.*)? instead of /firmware/image(/.*)?
-
-   * external/toybox/
-9d2cfe9 toybox: Restore support for toybox_static binary
-
-   * frameworks/base/
-e3f1922 ScreenStabilization Tile: Settings Menu integrated in Tile itself(long click)
-c09b46c Add ScreenStabilizationTile in QS
-40d76ca Make screen stabilization more responsive
-bf45db5 Screen Stabiization [1/3]
-cf76e1f SystemUI: Add dynamic Immersive mode tile
-28ab8ec [1/2] SystemUI: dont block IME space for back gesture
+   * frameworks/av/
+97072ef Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/frameworks/av into ten
 
    * frameworks/native/
-9684a37 Screen Stabilization [2/3]
+0fcccb5 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/frameworks/native into ten
+
+   * frameworks/opt/net/wifi/
+dd71edb Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/frameworks/opt/net/wifi into ten
+
+   * hardware/interfaces/
+ea37b94 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/hardware/interfaces into ten
+
+   * packages/apps/Nfc/
+9006fd1 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/Nfc into ten
 
    * packages/apps/Settings/
-b6ad259 Settings: reword gesture block ime option
-b4d4986 [2/2] Settings: dont block IME space for back gesture
+dda510b Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/apps/Settings into ten
 
-====================
-     02-12-2020
-====================
+   * packages/providers/DownloadProvider/
+2d6ecfa Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/providers/DownloadProvider into ten
 
+   * packages/providers/MediaProvider/
+5ddf2ff Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/packages/providers/MediaProvider into HEAD
 
-   * packages/apps/Contacts/
-fd051b2 Don't hardcode no contacts text color.
-
-   * packages/apps/DerpQuest/
-52377e5 DerpQuest: Reorganize and Categorize notification settings
-4da8dab DerpQuest: Reorganize and Categorize QS settings
-30bc412 DerpQuest: Move ambient light settings to their own fragment
-c0fda21 DerpQuest: Move flash on-call settings to their own fragment
-9d51833 DerpQuest: Move in-call vibration settings to their own fragment * And some code fixups
-0b48ed6 DerpQuest: Move charging info settings to their own fragment * Prevent FOD settings from showing on all devices * Orginize a bit
-a7cdea2 DerpQuest: Move LS Visualizer settings to their own fragment
-c5121a6 DerpQuest: Move LS Album Art settings to their own fragment
-43fe3af DerpQuest: Move Battery Bar settings to their own fragment * and some code fixups, string changes and comments
-61c65ea DerpQuest: LockScreenSettings: Add to search index
-5e0bf05 DerpQuest: Move Custom Header image setting to their own fragment
-2e950ad DerpQuest: Move QS Header settings to their own fragment
-a8324ba DerpQuest: Move QS Footer settings to their own fragment
-6e562e5 DerpQuest: Move Brightness Slider settings to their own fragment
-de43897 DerpQuest: Move QS Tiles settings to their own fragment
-16b32d2 DerpQuest: Move QS Color settings to their own fragment
-8b79751 DerpQuest: Move QS Blur settings to their own fragment * and some code fixups
-56c7180 DerpQuest: Move ticker settings to their own fragment
-4434823 DerpQuest: Move StatusBar battery settings to their own fragment
-aeefde6 DerpQuest: Convert StatusBar logo to a MasterSwitch
-95e6748 DerpQuest: Move date settings to their own fragment
-2b01433 DerpQuest: Move clock settings to thier own fragment
-9700b34 DerpQuest: Move network traffic to its own preference screen
-33bccbc DerpQuest: Added Italian translation
-cdbeeea DerpQuest: Add complete Chinese translations
-
-====================
-     02-11-2020
-====================
-
-
-   * build/make/
-4fbf6b8 Build VANILLA variant
-
-   * frameworks/base/
-a69f6bd FODCircleView: cleanup FOD customization techniques
-109ac60 base: Add Anaheim [1/2]
-10220a4 base: SystemUI: use system fonts
-cc386c2 base: Grant storage permission to Lawnchair
-8d18444 Merge pull request #42 from DarkDampSquib/ten
-
-   * kernel/huawei/angler/
-0aa4291 Mount system during early init
-
-   * manifest/
-b74ddd0 manifest: aosip: Do not track our fork of hardware/qcom/power
-
-   * packages/apps/DerpQuest/
-8a9b1c6 Merge pull request #23 from DarkDampSquib/ten
+   * system/sepolicy/
+e50d9da Fix storaged access to /sys/block/mmcblk0/stat after c936223c
 
    * vendor/aosip/
-afa740b vendor: version: Don't mark gapps builds zips
-384d441 Differentiate vanilla and gapps zips
+4d3d2a6 I stick to Community build forever.
+e9afe2d add angler
+
+====================
+     03-05-2020
+====================
+
+
+   * frameworks/base/
+f7d5c26 AODTile: disable tile when power save mode is on
+c7259d5 Resolver: Modernize layout
+2b1b002 Revert "Make resolver list layouts have round corners"
+735fbd5 Revert "Reland "Apply front scrim to doze pulsing""
+2c6c226 Revert "Fix AoD front scrim being opaque at DOZE_PULSING."
+
+   * system/apex/
+6b785bf Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/system/apex into HEAD
+
+====================
+     03-04-2020
+====================
+
+
+   * manifest/
+349b5dc Manifest for Android 10.0.0 Release 31
+720bca6 Add platform/tools/apifinder
+
+   * packages/apps/DerpQuest/
+d60ad6f DerpQuest: Update French translation
+24a7fdd DerpQuest: Removed unused strings in translation files
+
+   * packages/apps/Settings/
+e8a4f45 Settings: Removed unused strings in translation files
+
+====================
+     03-03-2020
+====================
+
+
+   * external/perfetto/
+1046b54 Merge tag 'android-10.0.0_r31' into ten
+
+   * frameworks/base/
+09f2c4c Revert "FODCircleView: disable touch detection on screen off"
+
+   * manifest/
+38f3fdb Manifest for Android 10.0.0 Release 30
+
+   * packages/apps/Contacts/
+c865baf Merge tag 'android-10.0.0_r31' into ten
+
+   * packages/apps/Dialer/
+e2a760f Merge tag 'android-10.0.0_r31' into ten
+
+   * packages/apps/DocumentsUI/
+252aea8 Merge tag 'android-10.0.0_r31' into ten
+
+   * packages/apps/Settings/
+948118f Settings: Add AGPS setting menu.
+
+   * packages/providers/ContactsProvider/
+cc92fd2 Merge tag 'android-10.0.0_r31' into ten
+
+   * platform_testing/
+f5be58d Merge tag 'android-10.0.0_r31' into ten
+
+   * vendor/overlay/
+32c3c64 overlay: Nuke accent overlays [3/3]
+
+====================
+     03-02-2020
+====================
+
+
+   * bionic/
+43fe73c Implement per-process target SDK version override.
+d1cd6e2 bionic: Support wildcards in cached hosts file
+
+   * frameworks/base/
+99b6805 SystemUI: AODTile: Use MD2 Icon
+17f1ac9 ChooserActivity: remove ugly separator
+84cc8b3 Ims: Add suppport for "Ims Preferred" WFC Preference
+90e1877 base: set accent_material_dark to light value
+c24b670 base: Nuke accent overlays [1/3] * We have RGB presets now
+ceb4dc2 Apply Dark theme changes when screen off only
+4d42d84 Updated UiModeManagerService to always trigger configuration change for setNightMode if it is AAE.
+5214e6b Fix Settings creating too many threads unexpectedly
+c8b7642 base: fix TwilightService start and initial location update
+de53ec6 Revert "Revert "Remove GPS single shot request""
+52e0b32 base: Perform accent prop set in UiModeManagerService
+
+   * packages/apps/DerpQuest/
+618c6f8 DerpQuest: Add RGB accent presets * Using the values of our existing accent overlays
+
+   * packages/apps/OmniStyle/
+3a03cd5 OmniStyle: hentai-header: fix canvas size issues
+8bbc81a OmniStyle: hentai-header: optimize some images
+1396c16 OmniStyle: bring more hentainess
+5522cbe OmniStyle: extend hentai header pack
+49e5565 OmnyStyle: add hentai header pack
+
+   * packages/apps/Settings/
+6a6c9de Settings: Nuke accent overlays [2/3] * We have RGB presets now
+
+   * packages/apps/ThemePicker/
+b5cb8e1 Revert "ThemePicker: integrate into OwlsNest"
+553c16d ThemePicker: allow full heigth for bottom layout in style option picker
+0dd9854 ThemePicker: Preview Light and Dark mode in Primary screen
+0a23caa ThemeFragment: Don't hide preview on white Accents or primarys
+
+   * packages/services/Telecomm/
+309436b Telecomm: Phone ringtone setting for Multi SIM device [3/3]
+e658b5b Added features flash-call-on-waiting [2/3]
+405a2a7 Use double vibration on call hang-up
+354128c Add back increasing ring feature (1/3).
+b6044e0 Incall vibration options [2/3]
+7a8e1aa Telecomm: Change font on some parts
+
+   * vendor/aosip/
+154bcfc Merge pull request #11 from kailashrs/ten
+6be5230 privapp-permissions: Grant CHANGE_OVERLAY_PACKAGES perm to OmniStyle
+d89fb57 dtbo: Sort the files we found
+52e14b3 tasks: dtbo: Add support for custom dtbo generation rules
+
+   * vendor/gapps/
+681e9a0 gapps: Remove GoogleDocumentsUIPrebuilt
+
+   * vendor/overlay/
+a4b6e8e overlay: Seperate Settings exposures from system for primarys
+bc55b61 Notification guts: Adapt to system theme
+0d6f1c3 overlay: PermissionsManager: Fix navbar color when using dark themes
+5de182e overlay: etc: Add Android.mk
 
    * vendor/pixelstyle/
-0fe71e1 pixelstyle: fonts: Add Anaheim [2/2]
+52f314f pixelstyle: Remove PixelDocumentsUIGoogleOverlay
 
