@@ -1,360 +1,213 @@
-*   I have removed the encryption of the data area so maybe a clean install is preferred.
-**  Because, if the terminal freezes and is forced to restart, the encrypted part is likely to be damaged and it becomes a boot loop.
-*** Is other ROMs all right?
+* Made some kernel tweaks.
+** I used to enable dt2w in the kernel, but I could not enable it from the rom settings.
+*** Due to this kernel tweak, some sepolicy is also changed.
+**** By the way, have you ever seen log with logcat?
+***** If "avc: denied ..." is recorded, sepolicy needs to be changed. If there are many "avc: denied ..." records, there should be a problem somewhere.
+****** About safetynet check, derpfest can be passed only with magisk installed. You can pass evox by setting the magisk hyde.
+******* Enjoy stay home.
 ====================
-     04-18-2020
+     04-26-2020
 ====================
-
-[manifest]
-Merge remote-tracking branch 'aosp/android-10.0.0_r33' into ten <11 hours ago> [864d08b]
-by: Ido Ben-Hur (idoybh2@gmail.com)
 
 [frameworks/base]
-fw/b: Squash of app fw restriction commits (#12) <16 hours ago> [805460e]
-by: rahul9999 (36025572+rahul9999xda@users.noreply.github.com)
+Revert "SystemUI: keep width on qs expand move" <13 hours ago> [10eda5e]
+by: Ido Ben-Hur (idoybh2@gmail.com)
 
-[packages/apps/Settings]
-Settings: per-app cellular data, vpn and wifi restrictions (#8) <16 hours ago> [c3ac5ba]
-by: rahul9999 (36025572+rahul9999xda@users.noreply.github.com)
+[frameworks/native]
+Revert "surfaceflinger: Merge caf changes" <48 minutes ago> [a04bfae]
+by: voidz777 (hatayan4949@gmail.com)
+Revert "SurfaceFlinger: Exclude CAF extensions from non-QC devices" <48 minutes ago> [dd9f5d1]
+by: voidz777 (hatayan4949@gmail.com)
 
 [vendor/aosip]
-soong_config: Add TARGET_HAS_HH_VSYNC_ISSUE <6 months ago> [fa1c2ce]
+soong_config: Add TARGET_HAS_HH_VSYNC_ISSUE <6 months ago> [bcc2f62]
 by: Sashko (sashko506@gmail.com)
-hammerhead <6 days ago> [ff45366]
+hammerhead <2 weeks ago> [cb0f4ee]
 by: voidz777 (hatayan4949@gmail.com)
-shamu <4 weeks ago> [0b93003]
+shamu <5 weeks ago> [77b94d2]
 by: voidz777 (hatayan4949@gmail.com)
-I stick to Community build forever. <3 months ago> [6688521]
+I stick to Community build forever. <4 months ago> [2497071]
 by: voidz777 (hatayan4949@gmail.com)
-add angler <4 months ago> [ac7d961]
+add angler <4 months ago> [10b8d09]
 by: voidz777 (hatayan4949@gmail.com)
+
+====================
+     04-25-2020
+====================
+
+[frameworks/base]
+SystemUI: decrease margin between qs and text <12 days ago> [469432b]
+by: ctwoon (ctwoon@suicide.today)
+FODCircleView: update position of icon before show <9 weeks ago> [c6f6df1]
+by: Demon000 (demonsingur@gmail.com)
+FODCircleView: Fix position on keyguard if cutout is hidden <2 months ago> [f4336aa]
+by: Hikari-no-Tenshi (kyryljan.serhij@gmail.com)
+FODCircleView: Fix position if cutout is hidden <9 months ago> [f90c8c5]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+SystemUI: QS: Allow toggling panels [1/2] <6 days ago> [afb6c53]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+base: notch-city: Add 3 mode display cutout handler <1 year, 5 months ago> [0046f4f]
+by: Kshitij Gupta (kshitijgm@gmail.com)
+SystemUI: Cleanup pixel live wallpapers changes <4 weeks ago> [ebe8f59]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+base: Make 'R style' notification headers toggleable [1/2] <8 days ago> [5420f9c]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Implement R style notification section headers <3 weeks ago> [a54b60e]
+by: shagbag913 (sh4gbag913@gmail.com)
+Revert "Hide gentle notification header independently of section priorities" <8 days ago> [b7c5345]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "base: Make gentle notifications header toggleable [1/2]" <8 days ago> [ea50217]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+aosipUtils: Use the right config resource for notch detection <8 days ago> [662f2a8]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+fw/b: Squash of app fw restriction commits (#12) <9 days ago> [d6eb2fb]
+by: rahul9999 (36025572+rahul9999xda@users.noreply.github.com)
+SystemUI: Add HeadsUp blacklists [1/2] <2 years, 7 months ago> [ba0ded1]
+by: Decad3nce (decad3nce@gmail.com)
+base: Tune some dimens to make icon spacing on SB equal <12 days ago> [817d5d8]
+by: Ido Ben-Hur (idoybh2@gmail.com)
 
 [packages/apps/DerpQuest]
-DerpQuest: Allow toggling heads up by using a master switch <30 hours ago> [6d98cc8]
+DerpQuest: Don't translate what you shouldn't <6 days ago> [8e390aa]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Add HeadsUp blacklists [2/2] <32 hours ago> [1fdaee0]
+DerpQuest: Allow toggling QS panels [2/2] <6 days ago> [ac69004]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Convert HeadsUp snooze and timeout to SeekBar <3 days ago> [1c0272e]
+DerpQuest: Make 'R style' notification headers toggleable [2/2] <8 days ago> [1cbd6b2]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "DerpQuest: Make gentle notifications header toggleable [2/2]" <8 days ago> [cab94c4]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Allow toggling heads up by using a master switch <10 days ago> [83c6cab]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Add HeadsUp blacklists [2/2] <10 days ago> [18756ba]
 by: Ido Ben-Hur (idoybh2@gmail.com)
 
-[system/netd]
-system/netd: Squash of app fw restriction commits (#1) <16 hours ago> [e267aca]
-by: rahul9999 (36025572+rahul9999xda@users.noreply.github.com)
 
-[vendor/pixelstyle]
-vendor: OPScreenRecorder: Update to v2.3.0 <3 weeks ago> [ea00c3d]
-by: AnierinB (anierinb@evolution-x.org)
+====================
+     04-24-2020
+====================
 
-[vendor/aosip]
-soong_config: Add TARGET_HAS_HH_VSYNC_ISSUE <6 months ago> [fa1c2ce]
-by: Sashko (sashko506@gmail.com)
-hammerhead <6 days ago> [ff45366]
+[frameworks/native]
+SurfaceFlinger: Exclude CAF extensions from non-QC devices <9 months ago> [9d06654]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+input: Adjust priority <3 years, 6 months ago> [31ac950]
+by: Steve Kondik (steve@cyngn.com)
+surfaceflinger: Merge caf changes <5 months ago> [23d927f]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+
+[packages/resources/devicesettings]
+Automatic translation import <3 days ago> [e886cdf]
+by: Michael Bestas (mkbestas@lineageos.org)
+
+[device/huawei/angler]
+set default <3 days ago> [114e401]
 by: voidz777 (hatayan4949@gmail.com)
-shamu <4 weeks ago> [0b93003]
+set Disable some wakelocks <3 days ago> [e8218bb]
 by: voidz777 (hatayan4949@gmail.com)
-I stick to Community build forever. <3 months ago> [6688521]
+update sepolicy <3 days ago> [9aa3395]
 by: voidz777 (hatayan4949@gmail.com)
-add angler <4 months ago> [ac7d961]
+set big.LITTLE scheduler tweaks <3 days ago> [db4bd66]
 by: voidz777 (hatayan4949@gmail.com)
+update sepolicy <3 days ago> [ae8b3af]
+by: voidz777 (hatayan4949@gmail.com)
+angler: Update zram config <6 weeks ago> [2333df5]
+by: Pranav Vashi (neobuddy89@gmail.com)
+
+[frameworks/native]
+SurfaceFlinger: Exclude CAF extensions from non-QC devices <9 months ago> [9d06654]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+input: Adjust priority <3 years, 6 months ago> [31ac950]
+by: Steve Kondik (steve@cyngn.com)
+surfaceflinger: Merge caf changes <5 months ago> [23d927f]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+
+
+====================
+     04-23-2020
+====================
+
+[frameworks/native]
+Merge "add the OMX_VIDEO_CodingAV1 in the OMX_VIDEO_CODINGTYPE" <6 months ago> [1ede4de]
+by: Hung-ying Tyan (tyanh@google.com)
+
+[device/huawei/angler]
+Enable core control with custom config <3 days ago> [b0e9773]
+by: voidz777 (hatayan4949@gmail.com)
+set enable retention idle state <4 days ago> [5f9c9cf]
+by: voidz777 (hatayan4949@gmail.com)
+Disable Gentle Fair Sleepers <4 days ago> [7353fe0]
+by: voidz777 (hatayan4949@gmail.com)
+set Backlight dimmer <4 days ago> [5c1708c]
+by: voidz777 (hatayan4949@gmail.com)
+Set I/O Scheduler tweaks <4 days ago> [514eca4]
+by: voidz777 (hatayan4949@gmail.com)
+
+[frameworks/native]
+Merge "add the OMX_VIDEO_CodingAV1 in the OMX_VIDEO_CODINGTYPE" <6 months ago> [1ede4de]
+by: Hung-ying Tyan (tyanh@google.com)
+
+
+====================
+     04-22-2020
+====================
 
 [kernel/huawei/angler]
-kernel: initialize and free cpufreq stats properly <1 year, 10 months ago> [8aa28da]
-by: Wei Wang (wvw@google.com)
-kernel: Fix massive cpufreq stats memory leaks <1 year, 10 months ago> [cdeb21c]
-by: Sultan Alsawaf (sultanxda@gmail.com)
-ANDROID: cpufreq: stats: Fix dead stats clearing timing <2 years, 7 months ago> [9d2cd77]
-by: Andres Oportus (andresoportus@google.com)
-ANDROID: cpufreq: stats: Fix sleeping while atomic in cpufreq_task_stats_init <2 years, 6 months ago> [c6c6f63]
-by: Siqi Lin (siqilin@google.com)
-ANDROID: cpufreq: stats: add uid removal for uid_time_in_state <2 years, 10 months ago> [24417c5a]
-by: Andres Oportus (andresoportus@google.com)
-ANDROID: cpufreq_stats: Fix task time in state locking <2 years, 11 months ago> [d6baa76]
-by: Andres Oportus (andresoportus@google.com)
-ANDROID: cpufreq_stat: add per task/uid/freq stats <3 years, 2 months ago> [76b6648]
-by: Andres Oportus (andresoportus@google.com)
-enable taskstats <1 year, 6 months ago> [c2fc6ab5]
-by: OzzysCmAcc (oskarkratochvil86@yahoo.com)
-ANDROID: uid_sys_stats: fix the comment <2 years, 3 months ago> [e2735d2]
-by: Artem Borisov (dedsa2002@gmail.com)
-uid_sys_stats: fix overflow when io usage delta is negative <2 years, 8 months ago> [0b801a0]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: defer io stats calulation for dead tasks <2 years, 11 months ago> [a831b7c]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: fix access of task_uid(task) <3 years ago> [c5f4f24]
-by: Ganesh Mahendran (opensource.ganesh@gmail.com)
-ANDROID: uid_sys_stats: reduce update_io_stats overhead <3 years ago> [85fdbf0]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: fix typo in init <3 years, 1 month ago> [93929a9]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: change to use rt_mutex <3 years, 1 month ago> [8213cb6]
-by: Wei Wang (wvw@google.com)
-ANDROID: uid_sys_stats: account for fsync syscalls <3 years, 2 months ago> [10e949d]
-by: Jin Qian (jinqian@google.com)
-ANDROID: sched: add a counter to track fsync <3 years, 2 months ago> [c675263]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: fix negative write bytes. <3 years, 2 months ago> [924c969]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: remove unnecessary code in procstat switch <3 years, 2 months ago> [7fdaa77]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: return full size when state is not changed. <3 years, 3 months ago> [16953db]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_sys_stats: allow writing same state <3 years, 3 months ago> [d3a9b10]
-by: Jin Qian (jinqian@google.com)
-CONFIG_UID_CPUTIME changed to CONFIG_UID_SYS_STATS <1 year, 9 months ago> [be2c428]
-by: Corinna Vinschen (xda@vinschen.de)
-ANDROID: uid_sys_stats: rename uid_cputime.c to uid_sys_stats.c <3 years, 3 months ago> [ffb8fac]
-by: Jin Qian (jinqian@google.com)
-ANDROID: uid_cputime: add per-uid IO usage accounting <3 years, 3 months ago> [55909c6]
-by: Jin Qian (jinqian@google.com)
-Revert "Introducing per-task/per-process cpufreq statistics." <2 days ago> [7190bff]
+Enable core_ctl <5 days ago> [5f33b14]
+by: voidz777 (hatayan4949@gmail.com)
+Disable MSM Performance <5 days ago> [e338998]
+by: voidz777 (hatayan4949@gmail.com)
+Disable fp boost <5 days ago> [df1c8c8]
+by: voidz777 (hatayan4949@gmail.com)
+Switch to cpu_input_boost <5 days ago> [96996c3]
+by: voidz777 (hatayan4949@gmail.com)
+add some cpu governors <5 days ago> [c42f63f]
+by: voidz777 (hatayan4949@gmail.com)
+Enable power efficient workqueue <5 days ago> [5557606]
+by: voidz777 (hatayan4949@gmail.com)
+Switch to simple thermal <5 days ago> [ba2afe4]
 by: voidz777 (hatayan4949@gmail.com)
 
 [device/huawei/angler]
-update sepolicy <10 hours ago> [d075685]
-by: voidz777 (hatayan4949@gmail.com)
-update sepolicy <11 hours ago> [9822b5a]
-by: voidz777 (hatayan4949@gmail.com)
-angler: relabel sys.listeners.registered <2 weeks ago> [5ba9b34]
-by: Anay Wadhera (awadhera@berkeley.edu)
-angler: use vendor.qcom.devup instead of sys.qcom.devup <2 weeks ago> [8742ef1]
-by: Anay Wadhera (awadhera@berkeley.edu)
-remove data encryption <27 hours ago> [10405f5]
-by: voidz777 (hatayan4949@gmail.com)
-set VENDOR_SECURITY_PATCH <2 days ago> [dc350a4]
-by: voidz777 (hatayan4949@gmail.com)
-Disable SF backpressure <4 weeks ago> [72e0592]
-by: Anusha Shakarad (ashaka@codeaurora.org)
-Revert "Enable GL comp backpressure" <24 hours ago> [e30ace9]
+update sepolicy <5 days ago> [89d125a]
 by: voidz777 (hatayan4949@gmail.com)
 
 
 ====================
-     04-17-2020
+     04-21-2020
 ====================
 
-[frameworks/base]
-SystemUI: Add HeadsUp blacklists [1/2] <2 years, 7 months ago> [ecadfbc]
-by: Decad3nce (decad3nce@gmail.com)
-
-[vendor/aosip]
-changelog: Improve Changelog generator (#18) <29 hours ago> [c5d328d]
-by: Nauval Rizky (enuma.alrizky@gmail.com)
-
-[vendor/overlay]
-overlay: Squash revert RGB picker [4/5] <5 days ago> [7818d9c]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Overlay: Add OnePlus Dark Primary <2 weeks ago> [d933521]
-by: Aman Singh (amankumarsingh1412@gmail.com)
-overlays: Add Flame primary <6 weeks ago> [17bf599]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-themes: Cleanup hardcoded colors and use/overlay AOSP values <6 weeks ago> [0e6009f]
-by: Christian Oder (myself5@carbonrom.org)
-overlay: remove background_floating_device_default_dark exposure <6 weeks ago> [0f201e5]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-themes: don't hardcode Screenrecord dialog color <6 weeks ago> [eac517d]
-by: Christian Oder (myself5@carbonrom.org)
-overlays: Remove more duplicate exposures <6 weeks ago> [4e34fec]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-overlays: Remove duplicate exposure for notifications <6 weeks ago> [33e4096]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-overlay: Nuke accent overlays [3/3] <7 weeks ago> [e86c14f]
-by: NurKeinNeid (mralexman3000@gmail.com)
-overlay: Seperate Settings exposures from system for primarys <7 weeks ago> [c5518ea]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-Notification guts: Adapt to system theme <8 weeks ago> [0d10ffc]
-by: Alex (du.alexcruz@gmail.com)
-overlay: PermissionsManager: Fix navbar color when using dark themes <3 months ago> [d0215b6]
-by: Alex (du.alexcruz@gmail.com)
-overlay: etc: Add Android.mk <8 weeks ago> [d30b1ff]
-by: Anirudh Gupta (anirudhgupta109@aosip.dev)
-Live captions: Have it follow system accent / fix up navbar <9 weeks ago> [e009aa3]
-by: Alex (du.alexcruz@gmail.com)
-overlay: add EmptyOverlay <2 months ago> [948d2a8]
-by: maxwen (max.weninger@gmail.com)
-overlay: remove left over wallpaper after name change <3 months ago> [e71956c]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-overlay: open sdcard root when launching DocumentsUI <1 year, 4 months ago> [1c845aa]
-by: jrizzoli (joey@lineageos.org)
-overlay: Extend icon previews list <2 months ago> [4ef3a97]
-by: NurKeinNeid (mralexman3000@gmail.com)
-overlay: Allow to theme Settings with primary <3 months ago> [f56f3b6]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-Overlays: Compress and optimize our default wallpaper <2 months ago> [7a994c7]
-by: NurKeinNeid (mralexman3000@gmail.com)
-Overlay: Add Solarized Dark Primary <3 months ago> [92a323e]
-by: Aman Singh (amankumarsingh1412@gmail.com)
-
-[vendor/aosip]
-changelog: Improve Changelog generator (#18) <29 hours ago> [c5d328d]
-by: Nauval Rizky (enuma.alrizky@gmail.com)
-
-
-====================
-     04-16-2020
-====================
-
-[frameworks/base]
-base: Tune some dimens to make icon spacing on SB equal <3 days ago> [d997b01]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[system/sepolicy]
-Fix storaged access to /sys/block/mmcblk0/stat after c936223c <1 year, 7 months ago> [7ec6dc7]
-by: Vladimir Oltean (olteanv@gmail.com)
-
-[packages/apps/DerpQuest]
-DerpQuest: Add HeadsUp timeout function [2/2] <3 years, 5 months ago> [41ec605]
-by: Lars Greiss (kufikugel@googlemail.com)
-DerpQuest: Add HeadsUp snooze function [2/2] <3 years, 5 months ago> [6be31c5]
-by: Lokesh Chamane (lokesh.c703@gmail.com)
-
-[packages/apps/OpenDelta]
-use sourceforge <3 months ago> [859c0ba]
+[device/huawei/angler]
+Congigure Simple Thermal driver <6 days ago> [9d6f60c]
 by: voidz777 (hatayan4949@gmail.com)
-voidz <3 months ago> [599f23e]
+update irqbalance.conf <6 days ago> [25b4c82]
+by: voidz777 (hatayan4949@gmail.com)
+add TAP_TO_WAKE_NODE <6 days ago> [0a368df]
+by: voidz777 (hatayan4949@gmail.com)
+Import stock Dalvik heap overrides <6 days ago> [2dae307]
 by: voidz777 (hatayan4949@gmail.com)
 
-[packages/apps/OpenDelta]
-use sourceforge <3 months ago> [859c0ba]
-by: voidz777 (hatayan4949@gmail.com)
-voidz <3 months ago> [599f23e]
-by: voidz777 (hatayan4949@gmail.com)
-
-[hardware/qcom/media]
-media: Add missing links <3 years, 5 months ago> [1f509a4]
-by: Ethan Chen (intervigil@gmail.com)
-
-[system/sepolicy]
-Fix storaged access to /sys/block/mmcblk0/stat after c936223c <1 year, 7 months ago> [7ec6dc7]
-by: Vladimir Oltean (olteanv@gmail.com)
-
 
 ====================
-     04-15-2020
+     04-20-2020
 ====================
-
-[frameworks/base]
-base: Add HeadsUp timeout function [1/2] <4 years, 1 month ago> [28f722c]
-by: Lars Greiss (kufikugel@googlemail.com)
-base: Add HeadsUp snooze function [1/2] <4 years ago> [14aa5c1]
-by: Lokesh Chamane (lokesh.c703@gmail.com)
-SystemUI: Fix custom lockscreen wallpaper <10 days ago> [918f23a]
-by: LuK1337 (priv.luk@gmail.com)
 
 [packages/apps/Settings]
-Settings: Squash revert RGB picker [2/5] <5 days ago> [90e85aa]
-by: Ido Ben-Hur (idoybh2@gmail.com)
+notch-city: Add 3 mode display cutout handler [3/3] (#9) <7 days ago> [f107e52]
+by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
 
-[packages/apps/ThemePicker]
-ThemePicker: Squash revert RGB picker [5/5] <5 days ago> [c971a3d]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/apps/DerpQuest]
-DerpQuest: Introduce HeadsUp settings fragment <3 days ago> [abc4a98]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-NetworkTraffic: Fix/adjust and properly restrict text sizing <5 weeks ago> [bafa47c]
-by: calebcabob (calphonic@gmail.com)
-DerpQuest: Squash revert RGB picker [3/5] <5 days ago> [c8fa9f2]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-
-====================
-     04-14-2020
-====================
-
-[device/aosip/sepolicy]
-Revert "aosip: common: add rules for RGB/HSL accentpicker" <5 days ago> [85f9950]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[frameworks/base]
-QSB: Only apply header padding if a custom header image is selected <5 days ago> [591507f]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-base: Squash revert RGB picker [1/5] <5 days ago> [ccf32e9]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-base: Proper fix of Android Auto <10 days ago> [85fed71]
-by: Hikari-no-Tenshi (kyryljan.serhij@gmail.com)
-
-[packages/apps/DerpQuest]
-DerpQuest: Update Greek translation (#49) <7 days ago> [37273b9]
-by: CrisBalGreece (crisbaladim@yahoo.gr)
-
-
-====================
-     04-13-2020
-====================
-
-[build/make]
-releasetools: do not remove dynamic partitions in system-only builds <7 weeks ago> [ed4cdc1]
-by: Peter Cai (peter@typeblog.net)
-Generate block based OTA for product partitions <11 months ago> [c3e7fdc]
-by: Tianjie Xu (xunchang@google.com)
-
-[device/qcom/sepolicy]
-sepolicy: Remove duplicated iwlan definition <6 days ago> [5c9853c]
-by: adi8900 (adrianszymanski242@gmail.com)
-sepolicy: Include wifi-ext sepol <4 months ago> [1dd534d]
-by: Dyneteve (dyneteve@pixelexperience.org)
-sepolicy: qva: Remove duplicate specification for qti.ims.ext <6 months ago> [f31feab]
-by: theimpulson (aayushgupta219@gmail.com)
-sepolicy: this is AOSiP <7 months ago> [9b933f5]
-by: Akhil Narang (akhilnarang.1999@gmail.com)
+[system/bt]
+Prevent abort in case of command timeout <2 years, 9 months ago> [c8b6706]
+by: Luke Zhang (lukez@codeaurora.org)
+Bluetooth: Read BLE vendor capability to proceed on Secure conn <4 years, 8 months ago> [de1daf3]
+by: Srinu Jella (sjella@codeaurora.org)
+Add support to force disable enhanced sco commands <2 years, 7 months ago> [ff0f0fe]
+by: cb (billchen1977@gmail.com)
 
 [vendor/aosip]
-Export techpack/audio uapi headers of msm 4.14 kernel <7 weeks ago> [2b5b3d5]
-by: dianlujitao (dianlujitao@lineageos.org)
-changelog: properly split each of manifest entry <5 days ago> [e853eb3]
-by: Nauval Rizky (enuma.alrizky@gmail.com)
-changelog: Also generate for repos in local manifests <6 days ago> [83cb572]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[prebuilts/clang/host/linux-x86]
-Update prebuilt Clang to r377782d. <13 days ago> [85dbf6c]
-by: Stephen Hines (srhines@google.com)
+vendor: notch-city: Add 3 mode display cutout handler [2/3] (#19) <7 days ago> [2753620]
+by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
 
 [vendor/aosip]
-Export techpack/audio uapi headers of msm 4.14 kernel <7 weeks ago> [2b5b3d5]
-by: dianlujitao (dianlujitao@lineageos.org)
-changelog: properly split each of manifest entry <5 days ago> [e853eb3]
-by: Nauval Rizky (enuma.alrizky@gmail.com)
-changelog: Also generate for repos in local manifests <6 days ago> [83cb572]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[build/make]
-releasetools: do not remove dynamic partitions in system-only builds <7 weeks ago> [ed4cdc1]
-by: Peter Cai (peter@typeblog.net)
-Generate block based OTA for product partitions <11 months ago> [c3e7fdc]
-by: Tianjie Xu (xunchang@google.com)
-
-
-====================
-     04-12-2020
-====================
-
-[build/make]
-build: Allow supplying a prebuilt recovery ramdisk cpio <6 days ago> [b2881e6]
-by: Christian Oder (myself5@carbonrom.org)
-Revert "build: Allow supplying a prebuilt recovery ramdisk cpio" <6 days ago> [6e21ef1]
-by: Kailash (kailash.sudhakar@gmail.com)
-
-[vendor/aosip]
-changelog: Prettify output for readability <6 days ago> [072306c]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-vendor: changelog: Avoid using repo to cycle through all repos <7 days ago> [f5095e5]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[prebuilts/clang/host/linux-x86/clang-proton]
-Update to 20200411 build <6 days ago> [ac072c7]
-by: Danny (danny@kdrag0n.dev)
-
-[vendor/aosip]
-changelog: Prettify output for readability <6 days ago> [072306c]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-vendor: changelog: Avoid using repo to cycle through all repos <7 days ago> [f5095e5]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[build/make]
-build: Allow supplying a prebuilt recovery ramdisk cpio <6 days ago> [b2881e6]
-by: Christian Oder (myself5@carbonrom.org)
-Revert "build: Allow supplying a prebuilt recovery ramdisk cpio" <6 days ago> [6e21ef1]
-by: Kailash (kailash.sudhakar@gmail.com)
+vendor: notch-city: Add 3 mode display cutout handler [2/3] (#19) <7 days ago> [2753620]
+by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
 
 
