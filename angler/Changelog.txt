@@ -1,213 +1,325 @@
-* Made some kernel tweaks.
-** I used to enable dt2w in the kernel, but I could not enable it from the rom settings.
-*** Due to this kernel tweak, some sepolicy is also changed.
-**** By the way, have you ever seen log with logcat?
-***** If "avc: denied ..." is recorded, sepolicy needs to be changed. If there are many "avc: denied ..." records, there should be a problem somewhere.
-****** About safetynet check, derpfest can be passed only with magisk installed. You can pass evox by setting the magisk hyde.
-******* Enjoy stay home.
+* I deleted the last build because the device was so hot. I think this device really becomes unstable when it's hot.
+** Based on that experience, I made a small work from this time to make it as cold as possible. Of course, the speed has slowed down.
 ====================
-     04-26-2020
+     05-06-2020
 ====================
 
 [frameworks/base]
-Revert "SystemUI: keep width on qs expand move" <13 hours ago> [10eda5e]
+SystemUI: Make sure volume expand icon points correctly <2 hours ago> [a6c23be]
 by: Ido Ben-Hur (idoybh2@gmail.com)
+SystemUI: tint volume panel expand button to follow textColorSecondary <10 hours ago> [32464ef]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/Dialer]
+Automatic translation import <19 hours ago> [f58ec8e]
+by: Akhil Narang (akhilnarang.1999@gmail.com)
+
+[packages/apps/Launcher3]
+Automatic translation import <19 hours ago> [f7c3480]
+by: Akhil Narang (akhilnarang.1999@gmail.com)
+
+[packages/apps/Messaging]
+Automatic translation import <19 hours ago> [19ba077]
+by: Akhil Narang (akhilnarang.1999@gmail.com)
+
+[device/huawei/angler]
+Overlay: enable fp on wake listener <10 hours ago> [2a140d3]
+by: voidz777 (hatayan4949@gmail.com)
+overlay: Enable system proximity sensor usage <2 years ago> [3601312]
+by: maxwen (max.weninger@gmail.com)
+update sepolicy <34 hours ago> [99ea059]
+by: voidz777 (hatayan4949@gmail.com)
+
+
+====================
+     05-05-2020
+====================
+
+[manifest]
+Merge tag 'android-10.0.0_r34' of https://android.googlesource.com/platform/manifest into ten <27 hours ago> [f9288e2]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Manifest for Android 10.0.0 Release 34 <29 hours ago> [3900458]
+by: The Android Open Source Project (initial-contribution@android.com)
+
+[build/make]
+Merge tag 'android-10.0.0_r34' of https://android.googlesource.com/platform/build into ten <27 hours ago> [9c45b91]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/av]
+Merge tag 'android-10.0.0_r34' into staging/ten-android-10.0.0_r34 <28 hours ago> [c7db185]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/base]
+Merge tag 'android-10.0.0_r34' of https://android.googlesource.com/platform/frameworks/base into ten <28 hours ago> [c38374b]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/Settings]
+Merge tag 'android-10.0.0_r34' into staging/ten-android-10.0.0_r34 <28 hours ago> [850d70b]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/services/Telephony]
+Merge tag 'android-10.0.0_r34' into staging/ten-android-10.0.0_r34 <27 hours ago> [cce9edf]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[system/bt]
+Merge tag 'android-10.0.0_r34' into staging/ten-android-10.0.0_r34 <27 hours ago> [8667d6a]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/OpenDelta]
+OpenDelta: Enable file flashing for A-only aswell <2 days ago> [85fc7ea]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[build/make]
+Merge tag 'android-10.0.0_r34' of https://android.googlesource.com/platform/build into ten <27 hours ago> [9c45b91]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/OpenDelta]
+OpenDelta: Enable file flashing for A-only aswell <2 days ago> [85fc7ea]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[hardware/qcom/display]
+Use LOCAL_VENDOR_MODULE <6 months ago> [402dd1e]
+by: voidz777 (hatayan4949@gmail.com)
+hwc: Move mdpHw declaration under DYNAMIC_FPS flag  - As this variable is used only when DYNAMIC_FPS is defined so  move this declaration under it. <7 months ago> [1cf06c9]
+by: Baldev Sahu (bsahu@codeaurora.org)
+hwc: Trigger dynamic refresh-rate change for more usecases * Until now it's been the case that refresh-rates were set to the standard values of 24, 30, 48 and 60 for video playback usecases. Since of the most panel vendors can only support refresh-rates above 45, in many of the use-cases with fps < 45, dynamic change in panel refresh rate doesn't happen. <7 months ago> [0b728f3]
+by: Raj Kamal (rkamal@codeaurora.org)
+msm8994: adjust for clang on Q <1 year, 2 months ago> [20fd9bd]
+by: Anay Wadhera (anay1018@gmail.com)
+
+[device/huawei/angler]
+update sepolicy <34 hours ago> [e8f433e]
+by: voidz777 (hatayan4949@gmail.com)
+angler: Build and import Snap Camera <4 months ago> [f4a9675]
+by: Pranav Vashi (neobuddy89@gmail.com)
+Don't add mini-debug-info to the boot classpath <10 weeks ago> [9b4018e]
+by: Arne Coucheron (arco68@gmail.com)
+Disable DiscoveryService <4 days ago> [f12255c]
+by: Michael W (baddaemon87@gmail.com)
+
+[vendor/motorola]
+victara: Renerate vendor <30 hours ago> [587db4c]
+by: Nolen Johnson (johnsonnolen@gmail.com)
+victara: prop-files: Remove libfwdlockengine and libbson <2 days ago> [00ea4ef]
+by: Nolen Johnson (johnsonnolen@gmail.com)
+
+[vendor/motorola]
+victara: Renerate vendor <30 hours ago> [587db4c]
+by: Nolen Johnson (johnsonnolen@gmail.com)
+victara: prop-files: Remove libfwdlockengine and libbson <2 days ago> [00ea4ef]
+by: Nolen Johnson (johnsonnolen@gmail.com)
+
+
+====================
+     05-04-2020
+====================
+
+[frameworks/base]
+build: Don't check for fingerprint mismatch <6 months ago> [98cf93a]
+by: Dan Cartier (nospamdan1@gmail.com)
+SystemUi: Replace QS Tile  Battery Saver Tile icons to MD2 Design <4 weeks ago> [23fd9a3]
+by: deadmanxxd (deadmanxxd@gmail.com)
+Default Permissions: grant Storage Permission to GBoard <5 weeks ago> [b4ffd6b]
+by: SuperDroidBond (superdroidbond@yahoo.com)
+base: Redo expanded volume panel for 10.x <1 year, 2 months ago> [0e58b19]
+by: HrX03 (dn.bianco03@gmail.com)
+QS header: Update and style edit strings <6 weeks ago> [f0def77]
+by: Alex (du.alexcruz@gmail.com)
 
 [frameworks/native]
-Revert "surfaceflinger: Merge caf changes" <48 minutes ago> [a04bfae]
-by: voidz777 (hatayan4949@gmail.com)
-Revert "SurfaceFlinger: Exclude CAF extensions from non-QC devices" <48 minutes ago> [dd9f5d1]
-by: voidz777 (hatayan4949@gmail.com)
+input: Adjust priority <3 years, 7 months ago> [12bd7e1]
+by: Steve Kondik (steve@cyngn.com)
 
-[vendor/aosip]
-soong_config: Add TARGET_HAS_HH_VSYNC_ISSUE <6 months ago> [bcc2f62]
-by: Sashko (sashko506@gmail.com)
-hammerhead <2 weeks ago> [cb0f4ee]
-by: voidz777 (hatayan4949@gmail.com)
-shamu <5 weeks ago> [77b94d2]
-by: voidz777 (hatayan4949@gmail.com)
-I stick to Community build forever. <4 months ago> [2497071]
-by: voidz777 (hatayan4949@gmail.com)
-add angler <4 months ago> [10b8d09]
-by: voidz777 (hatayan4949@gmail.com)
-
-====================
-     04-25-2020
-====================
-
-[frameworks/base]
-SystemUI: decrease margin between qs and text <12 days ago> [469432b]
-by: ctwoon (ctwoon@suicide.today)
-FODCircleView: update position of icon before show <9 weeks ago> [c6f6df1]
-by: Demon000 (demonsingur@gmail.com)
-FODCircleView: Fix position on keyguard if cutout is hidden <2 months ago> [f4336aa]
-by: Hikari-no-Tenshi (kyryljan.serhij@gmail.com)
-FODCircleView: Fix position if cutout is hidden <9 months ago> [f90c8c5]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-SystemUI: QS: Allow toggling panels [1/2] <6 days ago> [afb6c53]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-base: notch-city: Add 3 mode display cutout handler <1 year, 5 months ago> [0046f4f]
-by: Kshitij Gupta (kshitijgm@gmail.com)
-SystemUI: Cleanup pixel live wallpapers changes <4 weeks ago> [ebe8f59]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-base: Make 'R style' notification headers toggleable [1/2] <8 days ago> [5420f9c]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Implement R style notification section headers <3 weeks ago> [a54b60e]
-by: shagbag913 (sh4gbag913@gmail.com)
-Revert "Hide gentle notification header independently of section priorities" <8 days ago> [b7c5345]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Revert "base: Make gentle notifications header toggleable [1/2]" <8 days ago> [ea50217]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-aosipUtils: Use the right config resource for notch detection <8 days ago> [662f2a8]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-fw/b: Squash of app fw restriction commits (#12) <9 days ago> [d6eb2fb]
-by: rahul9999 (36025572+rahul9999xda@users.noreply.github.com)
-SystemUI: Add HeadsUp blacklists [1/2] <2 years, 7 months ago> [ba0ded1]
-by: Decad3nce (decad3nce@gmail.com)
-base: Tune some dimens to make icon spacing on SB equal <12 days ago> [817d5d8]
-by: Ido Ben-Hur (idoybh2@gmail.com)
+[packages/apps/Settings]
+Settings: Update RU translation (#10) <2 days ago> [70e26d0]
+by: skorpion720 (40567079+skorpion720@users.noreply.github.com)
 
 [packages/apps/DerpQuest]
-DerpQuest: Don't translate what you shouldn't <6 days ago> [8e390aa]
+DerpQuest: Allow toggling charging bolt [2/2] <4 days ago> [3f6ad2c]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow toggling QS panels [2/2] <6 days ago> [ac69004]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Make 'R style' notification headers toggleable [2/2] <8 days ago> [1cbd6b2]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Revert "DerpQuest: Make gentle notifications header toggleable [2/2]" <8 days ago> [cab94c4]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow toggling heads up by using a master switch <10 days ago> [83c6cab]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Add HeadsUp blacklists [2/2] <10 days ago> [18756ba]
-by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Update RU translation (#56) <2 days ago> [9513e6e]
+by: skorpion720 (40567079+skorpion720@users.noreply.github.com)
 
-
-====================
-     04-24-2020
-====================
+[scripts]
+scripts: aosp-merger: Split long echoes <2 days ago> [e3619af]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+scripts: aosp-merger: Would be nice to know what we're pushing <2 days ago> [c145641]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+scripts: aosp-merger: Only reset to new tags if there are changes <2 days ago> [cf6fd98]
+by: Ido Ben-Hur (idoybh2@gmail.com)
 
 [frameworks/native]
-SurfaceFlinger: Exclude CAF extensions from non-QC devices <9 months ago> [9d06654]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-input: Adjust priority <3 years, 6 months ago> [31ac950]
+input: Adjust priority <3 years, 7 months ago> [12bd7e1]
 by: Steve Kondik (steve@cyngn.com)
-surfaceflinger: Merge caf changes <5 months ago> [23d927f]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-
-[packages/resources/devicesettings]
-Automatic translation import <3 days ago> [e886cdf]
-by: Michael Bestas (mkbestas@lineageos.org)
-
-[device/huawei/angler]
-set default <3 days ago> [114e401]
-by: voidz777 (hatayan4949@gmail.com)
-set Disable some wakelocks <3 days ago> [e8218bb]
-by: voidz777 (hatayan4949@gmail.com)
-update sepolicy <3 days ago> [9aa3395]
-by: voidz777 (hatayan4949@gmail.com)
-set big.LITTLE scheduler tweaks <3 days ago> [db4bd66]
-by: voidz777 (hatayan4949@gmail.com)
-update sepolicy <3 days ago> [ae8b3af]
-by: voidz777 (hatayan4949@gmail.com)
-angler: Update zram config <6 weeks ago> [2333df5]
-by: Pranav Vashi (neobuddy89@gmail.com)
 
 [frameworks/native]
-SurfaceFlinger: Exclude CAF extensions from non-QC devices <9 months ago> [9d06654]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-input: Adjust priority <3 years, 6 months ago> [31ac950]
+input: Adjust priority <3 years, 7 months ago> [12bd7e1]
 by: Steve Kondik (steve@cyngn.com)
-surfaceflinger: Merge caf changes <5 months ago> [23d927f]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
 
 
 ====================
-     04-23-2020
+     05-03-2020
 ====================
 
-[frameworks/native]
-Merge "add the OMX_VIDEO_CodingAV1 in the OMX_VIDEO_CODINGTYPE" <6 months ago> [1ede4de]
-by: Hung-ying Tyan (tyanh@google.com)
+[build/soong]
+soong: restore installclean to the original behaviour <3 months ago> [f4b72ed]
+by: Akhil Narang (akhilnarang.1999@gmail.com)
 
-[device/huawei/angler]
-Enable core control with custom config <3 days ago> [b0e9773]
-by: voidz777 (hatayan4949@gmail.com)
-set enable retention idle state <4 days ago> [5f9c9cf]
-by: voidz777 (hatayan4949@gmail.com)
-Disable Gentle Fair Sleepers <4 days ago> [7353fe0]
-by: voidz777 (hatayan4949@gmail.com)
-set Backlight dimmer <4 days ago> [5c1708c]
-by: voidz777 (hatayan4949@gmail.com)
-Set I/O Scheduler tweaks <4 days ago> [514eca4]
-by: voidz777 (hatayan4949@gmail.com)
-
-[frameworks/native]
-Merge "add the OMX_VIDEO_CodingAV1 in the OMX_VIDEO_CODINGTYPE" <6 months ago> [1ede4de]
-by: Hung-ying Tyan (tyanh@google.com)
+[frameworks/base]
+base: Allow toggling charging bolt [1/2] <4 days ago> [7a2d4db]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+BatteryMeterView: Show a bolt ⚡ when charging <2 years, 3 months ago> [0b19ee9]
+by: ezio84 (brabus84@gmail.com)
 
 
 ====================
-     04-22-2020
-====================
-
-[kernel/huawei/angler]
-Enable core_ctl <5 days ago> [5f33b14]
-by: voidz777 (hatayan4949@gmail.com)
-Disable MSM Performance <5 days ago> [e338998]
-by: voidz777 (hatayan4949@gmail.com)
-Disable fp boost <5 days ago> [df1c8c8]
-by: voidz777 (hatayan4949@gmail.com)
-Switch to cpu_input_boost <5 days ago> [96996c3]
-by: voidz777 (hatayan4949@gmail.com)
-add some cpu governors <5 days ago> [c42f63f]
-by: voidz777 (hatayan4949@gmail.com)
-Enable power efficient workqueue <5 days ago> [5557606]
-by: voidz777 (hatayan4949@gmail.com)
-Switch to simple thermal <5 days ago> [ba2afe4]
-by: voidz777 (hatayan4949@gmail.com)
-
-[device/huawei/angler]
-update sepolicy <5 days ago> [89d125a]
-by: voidz777 (hatayan4949@gmail.com)
-
-
-====================
-     04-21-2020
-====================
-
-[device/huawei/angler]
-Congigure Simple Thermal driver <6 days ago> [9d6f60c]
-by: voidz777 (hatayan4949@gmail.com)
-update irqbalance.conf <6 days ago> [25b4c82]
-by: voidz777 (hatayan4949@gmail.com)
-add TAP_TO_WAKE_NODE <6 days ago> [0a368df]
-by: voidz777 (hatayan4949@gmail.com)
-Import stock Dalvik heap overrides <6 days ago> [2dae307]
-by: voidz777 (hatayan4949@gmail.com)
-
-
-====================
-     04-20-2020
+     05-02-2020
 ====================
 
 [packages/apps/Settings]
-notch-city: Add 3 mode display cutout handler [3/3] (#9) <7 days ago> [f107e52]
-by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
+Settings: add USB Diag mode to developer options <5 weeks ago> [536c4d1]
+by: Marko Man (darkobas@gmail.com)
+Settings: Remove no longer used tarnslation strings <9 days ago> [93bf653]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Settings: disable fingeprint during rename dialog <6 days ago> [7732090]
+by: maxwen (max.weninger@gmail.com)
+Settings: fix again the pair new icon in BT slice <3 weeks ago> [02abe68]
+by: maxwen (max.weninger@gmail.com)
 
-[system/bt]
-Prevent abort in case of command timeout <2 years, 9 months ago> [c8b6706]
-by: Luke Zhang (lukez@codeaurora.org)
-Bluetooth: Read BLE vendor capability to proceed on Secure conn <4 years, 8 months ago> [de1daf3]
-by: Srinu Jella (sjella@codeaurora.org)
-Add support to force disable enhanced sco commands <2 years, 7 months ago> [ff0f0fe]
-by: cb (billchen1977@gmail.com)
+[system/sepolicy]
+Fix storaged access to /sys/block/mmcblk0/stat after c936223c <1 year, 7 months ago> [4f73be6]
+by: Vladimir Oltean (olteanv@gmail.com)
+Add rules for misc_writer_system and boot_theme <8 months ago> [fcc58d7]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
 
 [vendor/aosip]
-vendor: notch-city: Add 3 mode display cutout handler [2/3] (#19) <7 days ago> [2753620]
-by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
+soong_config: Add TARGET_HAS_HH_VSYNC_ISSUE <6 months ago> [c30248d]
+by: Sashko (sashko506@gmail.com)
+hammerhead <3 weeks ago> [ba70f7e]
+by: voidz777 (hatayan4949@gmail.com)
+shamu <7 weeks ago> [992bc6f]
+by: voidz777 (hatayan4949@gmail.com)
+I stick to Community build forever. <4 months ago> [556534c]
+by: voidz777 (hatayan4949@gmail.com)
+add angler <4 months ago> [1e81492]
+by: voidz777 (hatayan4949@gmail.com)
+
+[packages/apps/DerpQuest]
+DerpQuest: Convert backlight timeout to be a SeekBar <4 days ago> [4cd5c34]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Update Greek translations (#53) <5 days ago> [7069612]
+by: CrisBalGreece (crisbaladim@yahoo.gr)
+DerpQuest: Adapt secure power menu toggle <6 days ago> [ee9500b]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Move StatusBar brightness control to gesture settings <7 days ago> [bac001a]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Update RU translations (#51,#52) <8 days ago> [2d2b3a6]
+by: skorpion720 (40567079+skorpion720@users.noreply.github.com)
+[SQUASH]DerpQuest: Add Battery Bar [2/2] <1 year, 2 months ago> [4ac28a2]
+by: bigrushdog (randall.rushing@gmail.com)
+DerpQuest: Update Greek translation (#50) <9 days ago> [e63a450]
+by: CrisBalGreece (crisbaladim@yahoo.gr)
+DerpQuest: Don't translate what you shouldn't <2 weeks ago> [fc59372]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Allow toggling QS panels [2/2] <2 weeks ago> [fe34557]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Make 'R style' notification headers toggleable [2/2] <2 weeks ago> [9358905]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "DerpQuest: Make gentle notifications header toggleable [2/2]" <2 weeks ago> [4aa170b]
+by: Ido Ben-Hur (idoybh2@gmail.com)
 
 [vendor/aosip]
-vendor: notch-city: Add 3 mode display cutout handler [2/3] (#19) <7 days ago> [2753620]
-by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
+soong_config: Add TARGET_HAS_HH_VSYNC_ISSUE <6 months ago> [c30248d]
+by: Sashko (sashko506@gmail.com)
+hammerhead <3 weeks ago> [ba70f7e]
+by: voidz777 (hatayan4949@gmail.com)
+shamu <7 weeks ago> [992bc6f]
+by: voidz777 (hatayan4949@gmail.com)
+I stick to Community build forever. <4 months ago> [556534c]
+by: voidz777 (hatayan4949@gmail.com)
+add angler <4 months ago> [1e81492]
+by: voidz777 (hatayan4949@gmail.com)
+
+[system/sepolicy]
+Fix storaged access to /sys/block/mmcblk0/stat after c936223c <1 year, 7 months ago> [4f73be6]
+by: Vladimir Oltean (olteanv@gmail.com)
+Add rules for misc_writer_system and boot_theme <8 months ago> [fcc58d7]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+
+
+====================
+     05-01-2020
+====================
+
+[manifest]
+manifest: Update vendor/google-customization path [1/2] <5 days ago> [bf3db4e]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/base]
+base: Hide power menu on secure lockscreen [1/2] <4 months ago> [9f39ed7]
+by: maxwen (max.weninger@gmail.com)
+Revert "[1/2] base: config to disable power menu on secure lock screen" <6 days ago> [1f6fe61]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[vendor/aosip]
+vendor: Update vendor/google-customization path [2/2] <5 days ago> [dd43d72]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[prebuilts/clang/host/linux-x86]
+Update prebuilt Clang to r383902. <6 days ago> [1eb04c4]
+by: Yabin Cui (yabinc@google.com)
+
+[vendor/google-customization]
+google-customization: Update paths <5 days ago> [9d2fa6a]
+by: Henrique Pereira (hlcpereira@pixelexperience.org)
+
+[vendor/aosip]
+vendor: Update vendor/google-customization path [2/2] <5 days ago> [dd43d72]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[hardware/qcom/display]
+msm8084: libhwcomposer fix some warnings <5 days ago> [7d10f4b]
+by: Elektroschmock (elektroschmock78@googlemail.com)
+Make hwc_vsync thread realtime <2 years, 1 month ago> [d20c3f8]
+by: Erik Wolsheimer (ewol@google.com)
+msm8084: Deprecate usage of cutils/log.h <5 days ago> [b9bd880]
+by: Elektroschmock (elektroschmock78@googlemail.com)
+
+[device/huawei/angler]
+set fingerprintSupportsGestures <9 days ago> [4d1d280]
+by: voidz777 (hatayan4949@gmail.com)
+Increase the maximum size for socket receive buffer <1 year, 6 months ago> [fec64c8]
+by: Subash Abhinov Kasiviswanathan (subashab@codeaurora.org)
+set Performance <6 days ago> [55f88fd]
+by: voidz777 (hatayan4949@gmail.com)
+set msm hotplug <7 days ago> [750aeb8]
+by: voidz777 (hatayan4949@gmail.com)
+angler: Update cpuset <3 months ago> [d43c5ae]
+by: Pranav Vashi (neobuddy89@gmail.com)
+angler: Add restricted cpuset <3 months ago> [d5a2a8d]
+by: Pranav Vashi (neobuddy89@gmail.com)
+
+
+====================
+     04-30-2020
+====================
+
+[kernel/huawei/angler]
+msm: camera: Instead of read_lock use read_lock_irqsave. <2 years, 8 months ago> [aaa0ee5]
+by: VijayaKumar T M (vtmuni@codeaurora.org)
+enable BOEFFLA_WL_BLOCKER <7 days ago> [0474db2]
+by: voidz777 (hatayan4949@gmail.com)
+wl_blocker: update the wakelock blocking list for Angler <2 years, 4 months ago> [a6343f0]
+by: Francisco Franco (franciscofranco.1990@gmail.com)
+boeffla_wl_blocker: export get_active_wakeup_sources <2 years, 6 months ago> [a52ce28]
+by: flar2 (asegaert@gmail.com)
+boeffla_wl_blocker: update to wakelock blocker driver v1.1.0 <2 years, 8 months ago> [3ef59ef]
+by: andip71 (andreasp@gmx.de)
+boeffla_wl_blocker: update to wakelock blocker driver v1.0.1 <2 years, 8 months ago> [0a8c868]
+by: andip71 (andreasp@gmx.de)
+boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0 <2 years, 8 months ago> [d33d3b5]
+by: andip71 (andreasp@gmx.de)
+Revert "wakeups: prevent nasty wakelocks from being acquired" <2 years, 4 months ago> [081ff95]
+by: Francisco Franco (franciscofranco.1990@gmail.com)
 
 
