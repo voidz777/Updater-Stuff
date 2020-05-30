@@ -1,137 +1,153 @@
 ====================
-     05-24-2020
+     05-30-2020
 ====================
 
-[device/qcom/sepolicy-legacy-um]
-sepolicy: Unlabel aux camera whitelist prop <2 weeks ago> [6116393]
-by: dianlujitao (dianlujitao@lineageos.org)
-
 [frameworks/base]
-base: Settings: Allow showing SB ticker for media [1/2] <18 hours ago> [168b937]
+base: QS: Have a consistent default row value <10 hours ago> [d26cba3]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-SystemUI: Bring back good ol' circle battery style [1/2] <4 months ago> [1246962]
-by: Luca Stefani (luca.stefani.ge1@gmail.com)
-base: Add more RU translations (#20,#21) <24 hours ago> [4346734]
-by: RunningMango (36758157+RunningMango@users.noreply.github.com)
 
 [packages/apps/DerpQuest]
-DerpQuest: Allow showing SB ticker for media [2/2] <18 hours ago> [19b577c]
+DerpQuest: Update Greek translation (#62) <35 hours ago> [235647b]
+by: CrisBalGreece (crisbaladim@yahoo.gr)
+DerpQuest: Make TwoTargetPreference divider slimmer <5 days ago> [c4e67a7]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Bring back good ol' circle battery style [2/2] <4 months ago> [ed78735]
+DerpQuest: Allow showing SB ticker for media [2/2] <6 days ago> [7b670f3]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Bring back good ol' circle battery style [2/2] <4 months ago> [d7ce7d3]
 by: Luca Stefani (luca.stefani.ge1@gmail.com)
-
-
-====================
-     05-23-2020
-====================
-
-[device/aosip/sepolicy]
-common: Move aux camera whitelist prop to vendor <8 days ago> [cfb4ba0]
-by: dianlujitao (dianlujitao@lineageos.org)
-common: Expose aux camera {black,white}list props <2 weeks ago> [d650e9e]
-by: dianlujitao (dianlujitao@lineageos.org)
-
-[device/qcom/sepolicy]
-sepolicy: Unlabel aux camera whitelist prop (#2) <24 hours ago> [bfcbd6e]
-by: Adrian (adrianszymanski242@gmail.com)
-
-[frameworks/base]
-SystemUI: QS: LteTile: Launch network settings when long pressing <2 days ago> [c3d8400]
+DerpQuest: Update RU translation (#59,#60,#61,#63) <10 days ago> [429a9d2]
+by: Northn (57762732+Northn@users.noreply.github.com)
+ColorPicker: Enable the reset button when setting a default at runtime <11 days ago> [d827614]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-SystemUI: QS: Don't launch details view when pressing on labels <2 days ago> [6986f7b]
+DerpQuest: Allow choosing a custom color for pressed FOD [2/2] <11 days ago> [6733790]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-SystemUI: QS: Allow overriding panels switch in specific tiles <3 days ago> [bc1b650]
+DerpQuest: Disable SELinux switch if unrooted <12 days ago> [9e42f8e]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-Revert "Revert "SystemUI: Enable and fix QS detail view, adapt layout to Pie"" <2 days ago> [522fff6]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[scripts]
-updater: fix typos in comments (#1) <7 days ago> [6c48758]
-by: Omkar Chandorkar (forumomkar@gmail.com)
-scripts: updater: Rewrite <7 days ago> [979784c]
+Utils: Add root check function <12 days ago> [9c66038]
 by: Ido Ben-Hur (idoybh2@gmail.com)
 
 
 ====================
-     05-22-2020
+     05-29-2020
+====================
+
+[device/qcom/sepolicy-legacy]
+sepolicy: Add access policy for charger <4 months ago> [03d80cb]
+by: YumeMichi (do4suki@gmail.com)
+sepolicy-legacy: Allow Snap to read camera props <3 months ago> [d41b6cd]
+by: Bruno Martins (bgcngm@gmail.com)
+sepolicy : Add rule to set property for wlan driver/fw ver info <1 year ago> [1c3c9ca]
+by: Vinay Gannevaram (vganneva@codeaurora.org)
+sepolicy: Policy fix for emmc based rpmb partition <1 year, 1 month ago> [9aaea35]
+by: Anmolpreet Kaur (anmolpre@codeaurora.org)
+sepolicy: provide rules for cryptfs_hw hal <11 months ago> [f5060c1]
+by: Shailendra Gupta (shaigu@codeaurora.org)
+
+
+====================
+     05-28-2020
 ====================
 
 
 ====================
-     05-21-2020
-====================
-
-
-====================
-     05-20-2020
+     05-27-2020
 ====================
 
 [packages/apps/Dialer]
-Automatic translation import <5 days ago> [0c2ebe9]
-by: Akhil Narang (akhilnarang.1999@gmail.com)
+Dialer: Add extra privapp permissions xml <3 weeks ago> [f95c42a]
+by: Michael Bestas (mkbestas@lineageos.org)
 
 [packages/apps/Launcher3]
-Automatic translation import <5 days ago> [fa17e33]
+Launcher3: Add FORCE_STOP_PACKAGES permission <3 weeks ago> [d66e87f]
+by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
+Launcher3: Add extra privapp permissions xml <3 weeks ago> [8063472]
+by: Michael Bestas (mkbestas@lineageos.org)
+
+[packages/apps/Messaging]
+Automatic translation import <3 days ago> [ce6996b]
 by: Akhil Narang (akhilnarang.1999@gmail.com)
-
-[packages/apps/DerpQuest]
-DerpQuest: Update RU translation (#59) <5 days ago> [f8a8ab4]
-by: Northn (57762732+Northn@users.noreply.github.com)
-
-[vendor/motorola]
-river: Replace adobe and native qcdm calib data <6 months ago> [35a62d8]
-by: Erfan Abdi (erfangplus@gmail.com)
-sdm632-common: rollback sdm blobs to lake Q <6 days ago> [197a298]
-by: Andrew Hexen (SyberHexen@gmail.com)
-
-[vendor/motorola]
-river: Replace adobe and native qcdm calib data <6 months ago> [35a62d8]
-by: Erfan Abdi (erfangplus@gmail.com)
-sdm632-common: rollback sdm blobs to lake Q <6 days ago> [197a298]
-by: Andrew Hexen (SyberHexen@gmail.com)
+Messaging: Add sysconfig whitelist xml <3 weeks ago> [f200ff2]
+by: Michael Bestas (mkbestas@lineageos.org)
 
 
 ====================
-     05-19-2020
+     05-26-2020
 ====================
 
-[frameworks/base]
-base: Allow choosing a custom color for pressed FOD [1/2] <6 days ago> [bee6a79]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/apps/DerpQuest]
-ColorPicker: Enable the reset button when setting a default at runtime <5 days ago> [20c139f]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow choosing a custom color for pressed FOD [2/2] <6 days ago> [0b646ec]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Disable SELinux switch if unrooted <6 days ago> [336062d]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Utils: Add root check function <6 days ago> [a817422]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-
-====================
-     05-18-2020
-====================
-
-[frameworks/base]
-DefaultPermissionGrantPolicy: Remove uneeded permissions <7 days ago> [4969c1d]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/apps/Settings]
-Settings: Add boot receiver for SELinux switch <7 days ago> [163bb69]
-by: Ido Ben-Hur (idoybh2@gmail.com)
+[vendor/aosip]
+extract_utils: Fix vendor Android.bp creation with subdirectory <7 days ago> [f45f384]
+by: Andreas Schneider (asn@cryptomilk.org)
+extract_utils: Handle Brotli compressed block image <6 weeks ago> [f935c42]
+by: dianlujitao (dianlujitao@lineageos.org)
+extract_utils: Support odm/product/vendor partition for zip extract <6 weeks ago> [c82dfe2]
+by: dianlujitao (dianlujitao@lineageos.org)
+extract_utils: Generate deodexed apk/jar with consistent checksum <8 weeks ago> [98cd330]
+by: dianlujitao (dianlujitao@lineageos.org)
+extract_utils: Fix doubled path separator <8 weeks ago> [142e6b3]
+by: dianlujitao (dianlujitao@lineageos.org)
 
 [vendor/overlay]
-overlay: Grant default DND access to AOSP settings intelligence <7 days ago> [77a94bf]
+overlays: Fix fc when trying to apply kronicgreen theme <3 weeks ago> [91ba24c]
+by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
+
+[scripts]
+fscripts: updater: Print diff with no pager <4 days ago> [4a931b2]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+updater: fix typos in comments (#1) <13 days ago> [d40d39c]
+by: Omkar Chandorkar (forumomkar@gmail.com)
+scripts: updater: Rewrite <13 days ago> [a1494de]
 by: Ido Ben-Hur (idoybh2@gmail.com)
 
-[packages/apps/DerpQuest]
-DerpQuest: Add SELinux switch <2 years, 11 months ago> [65f48a6]
-by: Alex Cruz (mazdarider23@gmail.com)
+[vendor/aosip]
+extract_utils: Fix vendor Android.bp creation with subdirectory <7 days ago> [f45f384]
+by: Andreas Schneider (asn@cryptomilk.org)
+extract_utils: Handle Brotli compressed block image <6 weeks ago> [f935c42]
+by: dianlujitao (dianlujitao@lineageos.org)
+extract_utils: Support odm/product/vendor partition for zip extract <6 weeks ago> [c82dfe2]
+by: dianlujitao (dianlujitao@lineageos.org)
+extract_utils: Generate deodexed apk/jar with consistent checksum <8 weeks ago> [98cd330]
+by: dianlujitao (dianlujitao@lineageos.org)
+extract_utils: Fix doubled path separator <8 weeks ago> [142e6b3]
+by: dianlujitao (dianlujitao@lineageos.org)
 
-[vendor/gapps]
-gapps: Remove no longer needed perms <7 days ago> [9df2056]
+
+====================
+     05-25-2020
+====================
+
+[art]
+art: extend the supported cpu_variant list for arm64 <2 years, 7 months ago> [fd20d13]
+by: Wei Wang (wangw@codeaurora.org)
+
+
+====================
+     05-24-2020
+====================
+
+[device/aosip/sepolicy]
+common: Move aux camera whitelist prop to vendor <2 weeks ago> [cfb4ba0]
+by: dianlujitao (dianlujitao@lineageos.org)
+common: Expose aux camera {black,white}list props <3 weeks ago> [d650e9e]
+by: dianlujitao (dianlujitao@lineageos.org)
+
+[device/qcom/sepolicy]
+sepolicy: Unlabel aux camera whitelist prop (#2) <7 days ago> [bfcbd6e]
+by: Adrian (adrianszymanski242@gmail.com)
+
+[device/qcom/sepolicy-legacy-um]
+sepolicy: Unlabel aux camera whitelist prop <3 weeks ago> [6116393]
+by: dianlujitao (dianlujitao@lineageos.org)
+
+[frameworks/base]
+base: Settings: Allow showing SB ticker for media [1/2] <6 days ago> [168b937]
 by: Ido Ben-Hur (idoybh2@gmail.com)
+SystemUI: Bring back good ol' circle battery style [1/2] <4 months ago> [1246962]
+by: Luca Stefani (luca.stefani.ge1@gmail.com)
+base: Add more RU translations (#20,#21) <7 days ago> [4346734]
+by: RunningMango (36758157+RunningMango@users.noreply.github.com)
+
+[packages/resources/devicesettings]
+Automatic translation import <7 days ago> [fe24103]
+by: Michael Bestas (mkbestas@lineageos.org)
 
 
