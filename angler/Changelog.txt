@@ -1,153 +1,303 @@
 ====================
-     05-30-2020
+     06-07-2020
 ====================
 
 [frameworks/base]
-base: QS: Have a consistent default row value <10 hours ago> [d26cba3]
+VolumeDialog: Fix live caption button when on left side <3 days ago> [0dfd8ef]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+base: Allow choosing a custom vibration pattern [1/3] <31 hours ago> [87269d5]
 by: Ido Ben-Hur (idoybh2@gmail.com)
 
-[packages/apps/DerpQuest]
-DerpQuest: Update Greek translation (#62) <35 hours ago> [235647b]
-by: CrisBalGreece (crisbaladim@yahoo.gr)
-DerpQuest: Make TwoTargetPreference divider slimmer <5 days ago> [c4e67a7]
+[packages/apps/Settings]
+Settings: Allow choosing a custom vibration pattern [3/3] <23 hours ago> [51c47c9]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow showing SB ticker for media [2/2] <6 days ago> [7b670f3]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Bring back good ol' circle battery style [2/2] <4 months ago> [d7ce7d3]
-by: Luca Stefani (luca.stefani.ge1@gmail.com)
-DerpQuest: Update RU translation (#59,#60,#61,#63) <10 days ago> [429a9d2]
-by: Northn (57762732+Northn@users.noreply.github.com)
-ColorPicker: Enable the reset button when setting a default at runtime <11 days ago> [d827614]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow choosing a custom color for pressed FOD [2/2] <11 days ago> [6733790]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Disable SELinux switch if unrooted <12 days ago> [9e42f8e]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Utils: Add root check function <12 days ago> [9c66038]
+Settings: Add vibration patterns from OOS [3/3] <2 days ago> [3a70a4b]
 by: Ido Ben-Hur (idoybh2@gmail.com)
 
 
 ====================
-     05-29-2020
+     06-06-2020
 ====================
 
-[device/qcom/sepolicy-legacy]
-sepolicy: Add access policy for charger <4 months ago> [03d80cb]
-by: YumeMichi (do4suki@gmail.com)
-sepolicy-legacy: Allow Snap to read camera props <3 months ago> [d41b6cd]
-by: Bruno Martins (bgcngm@gmail.com)
-sepolicy : Add rule to set property for wlan driver/fw ver info <1 year ago> [1c3c9ca]
-by: Vinay Gannevaram (vganneva@codeaurora.org)
-sepolicy: Policy fix for emmc based rpmb partition <1 year, 1 month ago> [9aaea35]
-by: Anmolpreet Kaur (anmolpre@codeaurora.org)
-sepolicy: provide rules for cryptfs_hw hal <11 months ago> [f5060c1]
-by: Shailendra Gupta (shaigu@codeaurora.org)
+[frameworks/base]
+base: Add vibration patterns from OOS [1/3] <4 months ago> [8f35460]
+by: rituj (ritujbeniwal@gmail.com)
+base: Fix NPE on some devices by checking for null client (#24) <2 days ago> [4b1c9ff]
+by: Pierre-Hugues Husson (phh@phh.me)
+base: Add refresh rate setting [1/2] (#23) <2 days ago> [884d0eb]
+by: Anushek Prasal (anushekprasal@gmail.com)
 
-
-====================
-     05-28-2020
-====================
-
-
-====================
-     05-27-2020
-====================
-
-[packages/apps/Dialer]
-Dialer: Add extra privapp permissions xml <3 weeks ago> [f95c42a]
-by: Michael Bestas (mkbestas@lineageos.org)
-
-[packages/apps/Launcher3]
-Launcher3: Add FORCE_STOP_PACKAGES permission <3 weeks ago> [d66e87f]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-Launcher3: Add extra privapp permissions xml <3 weeks ago> [8063472]
-by: Michael Bestas (mkbestas@lineageos.org)
-
-[packages/apps/Messaging]
-Automatic translation import <3 days ago> [ce6996b]
-by: Akhil Narang (akhilnarang.1999@gmail.com)
-Messaging: Add sysconfig whitelist xml <3 weeks ago> [f200ff2]
-by: Michael Bestas (mkbestas@lineageos.org)
-
-
-====================
-     05-26-2020
-====================
-
-[vendor/aosip]
-extract_utils: Fix vendor Android.bp creation with subdirectory <7 days ago> [f45f384]
-by: Andreas Schneider (asn@cryptomilk.org)
-extract_utils: Handle Brotli compressed block image <6 weeks ago> [f935c42]
-by: dianlujitao (dianlujitao@lineageos.org)
-extract_utils: Support odm/product/vendor partition for zip extract <6 weeks ago> [c82dfe2]
-by: dianlujitao (dianlujitao@lineageos.org)
-extract_utils: Generate deodexed apk/jar with consistent checksum <8 weeks ago> [98cd330]
-by: dianlujitao (dianlujitao@lineageos.org)
-extract_utils: Fix doubled path separator <8 weeks ago> [142e6b3]
-by: dianlujitao (dianlujitao@lineageos.org)
-
-[vendor/overlay]
-overlays: Fix fc when trying to apply kronicgreen theme <3 weeks ago> [91ba24c]
-by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
-
-[scripts]
-fscripts: updater: Print diff with no pager <4 days ago> [4a931b2]
+[packages/services/Telecomm]
+Telecomm: Allow choosing a custom vibration pattern [2/3] <31 hours ago> [3e3fac4]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-updater: fix typos in comments (#1) <13 days ago> [d40d39c]
-by: Omkar Chandorkar (forumomkar@gmail.com)
-scripts: updater: Rewrite <13 days ago> [a1494de]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[vendor/aosip]
-extract_utils: Fix vendor Android.bp creation with subdirectory <7 days ago> [f45f384]
-by: Andreas Schneider (asn@cryptomilk.org)
-extract_utils: Handle Brotli compressed block image <6 weeks ago> [f935c42]
-by: dianlujitao (dianlujitao@lineageos.org)
-extract_utils: Support odm/product/vendor partition for zip extract <6 weeks ago> [c82dfe2]
-by: dianlujitao (dianlujitao@lineageos.org)
-extract_utils: Generate deodexed apk/jar with consistent checksum <8 weeks ago> [98cd330]
-by: dianlujitao (dianlujitao@lineageos.org)
-extract_utils: Fix doubled path separator <8 weeks ago> [142e6b3]
-by: dianlujitao (dianlujitao@lineageos.org)
+Telecomm: Add vibration patterns from OOS [2/3] <4 months ago> [98fcc12]
+by: rituj (ritujbeniwal@gmail.com)
 
 
 ====================
-     05-25-2020
-====================
-
-[art]
-art: extend the supported cpu_variant list for arm64 <2 years, 7 months ago> [fd20d13]
-by: Wei Wang (wangw@codeaurora.org)
-
-
-====================
-     05-24-2020
+     06-05-2020
 ====================
 
 [device/aosip/sepolicy]
-common: Move aux camera whitelist prop to vendor <2 weeks ago> [cfb4ba0]
-by: dianlujitao (dianlujitao@lineageos.org)
-common: Expose aux camera {black,white}list props <3 weeks ago> [d650e9e]
-by: dianlujitao (dianlujitao@lineageos.org)
+add missing rule for update_engine (#3) <3 days ago> [79856b4]
+by: Murtaza@Piplod (murtaza1926@gmail.com)
 
-[device/qcom/sepolicy]
-sepolicy: Unlabel aux camera whitelist prop (#2) <7 days ago> [bfcbd6e]
-by: Adrian (adrianszymanski242@gmail.com)
+[packages/apps/Settings]
+Settings: Use device specific max refresh rate for the switch (#14) <2 days ago> [c387439]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Settings: Add refresh rate setting [2/2] (#13) <2 days ago> [da465e1]
+by: Cryllic Buster (49910222+CryllicBuster273@users.noreply.github.com)
 
-[device/qcom/sepolicy-legacy-um]
-sepolicy: Unlabel aux camera whitelist prop <3 weeks ago> [6116393]
-by: dianlujitao (dianlujitao@lineageos.org)
+[system/sepolicy]
+Fix storaged access to /sys/block/mmcblk0/stat after c936223c <1 year, 8 months ago> [3e8f1a4]
+by: Vladimir Oltean (olteanv@gmail.com)
+
+
+====================
+     06-04-2020
+====================
 
 [frameworks/base]
-base: Settings: Allow showing SB ticker for media [1/2] <6 days ago> [168b937]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-SystemUI: Bring back good ol' circle battery style [1/2] <4 months ago> [1246962]
-by: Luca Stefani (luca.stefani.ge1@gmail.com)
-base: Add more RU translations (#20,#21) <7 days ago> [4346734]
-by: RunningMango (36758157+RunningMango@users.noreply.github.com)
+SystemUI: Use AOSP bluetooth icon when showing battery level <2 weeks ago> [8a9985c]
+by: Kshitij Gupta (kshitijgm@gmail.com)
+SystemUI: update Bluetooth battery level assets. <8 months ago> [5b0bf9c]
+by: Hernán Castañón Álvarez (herna@paranoidandroid.co)
+[SQUASH]Bring back notch-city after r38 <3 days ago> [c491bf9]
+by: AgentFabulous (kshitijgm@gmail.com)
 
-[packages/resources/devicesettings]
-Automatic translation import <7 days ago> [fe24103]
-by: Michael Bestas (mkbestas@lineageos.org)
+[packages/apps/Contacts]
+AOSP/Contacts - Updated to sdkVersion 29. <8 months ago> [b5a0853]
+by: Raman Tenneti (rtenneti@google.com)
+Contacts: manually configure dark theme for list <3 weeks ago> [bdd1218]
+by: Jesse Chan (jc@lineageos.org)
+Contacts: allow framework to do dark theming automatically <3 weeks ago> [c103b8c]
+by: Jesse Chan (jc@lineageos.org)
+Contacts: use white nav bar <1 year, 5 months ago> [2287165]
+by: Joey (joey@lineageos.org)
+Contacts: Remove current dark theme <12 days ago> [2ae1a48]
+by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
+
+[packages/apps/Matlog]
+MatLog: update gradle version <3 days ago> [a4b8b6f]
+by: maxwen (max.weninger@gmail.com)
+
+[packages/apps/Messaging]
+Automatic translation import <4 days ago> [b3d54db]
+by: Akhil Narang (akhilnarang.1999@gmail.com)
+Remove current dark mode <12 days ago> [e29445f]
+by: Josh Fox (XlxFoXxlX) (joshfox87@gmail.com)
+Messaging: disable auto dark theming on message bubble <3 weeks ago> [9dc9a0f]
+by: Jesse Chan (jc@lineageos.org)
+Messaging: allow framework to do dark theming automatically <3 weeks ago> [20c18da]
+by: Jesse Chan (jc@lineageos.org)
+
+[packages/apps/Settings]
+Settings: Update RU translation (#12) <4 days ago> [1700e6a]
+by: Northn (57762732+Northn@users.noreply.github.com)
+Fix NPE if default supervisor is not defined <3 weeks ago> [13718ad]
+by: Wang Han (wanghan1995315@gmail.com)
+
+[vendor/gapps]
+gapps: Remove SoundPickerPrebuilt <4 days ago> [40d22a5]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[vendor/pixelstyle]
+pixelstyle: Add SoundPickerPrebuilt (#5) <4 days ago> [02af792]
+by: Aman Kumar Singh (46120388+amanrajOO7@users.noreply.github.com)
+
+
+====================
+     06-03-2020
+====================
+
+[frameworks/base]
+SystemUI: Don't forcefully convert wallpaper to SRGB <6 days ago> [24782cc]
+by: Luca Stefani (luca.stefani.ge1@gmail.com)
+Merge tag 'android-10.0.0_r38' into ten <4 days ago> [44dc5a4]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "base: notch-city: Add 3 mode display cutout handler" <5 days ago> [472d9e2]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[hardware/nxp/nfc]
+Merge tag 'android-10.0.0_r37' into ten <5 days ago> [8319cb5]
+by: Akhil Narang (me@akhilnarang.dev)
+
+[packages/apps/Contacts]
+Merge tag 'android-10.0.0_r37' into ten <5 days ago> [9150c53]
+by: Akhil Narang (me@akhilnarang.dev)
+
+[packages/apps/DocumentsUI]
+Merge tag 'android-10.0.0_r37' into ten <5 days ago> [46cbbb1]
+by: Akhil Narang (me@akhilnarang.dev)
+
+[packages/apps/Matlog]
+MatLog: dont run unecessary checks on startup <4 days ago> [3580064]
+by: maxwen (max.weninger@gmail.com)
+
+[platform_testing]
+Merge tag 'android-10.0.0_r37' into ten <5 days ago> [fa717d1]
+by: Akhil Narang (me@akhilnarang.dev)
+
+[packages/apps/OpenDelta]
+Merge remote-tracking branch 'omni/android-10' into HEAD <4 days ago> [55f33c5]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/PixelLiveWallpaper]
+Update from QQ3A.200605.001 <4 days ago> [838cd34]
+by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+
+[packages/apps/OpenDelta]
+Merge remote-tracking branch 'omni/android-10' into HEAD <4 days ago> [55f33c5]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+
+====================
+     06-02-2020
+====================
+
+[art]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [362a3be]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[bootable/recovery]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [b035f2f]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[development]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [f8b9246]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[manifest]
+Merge remote-tracking branch 'aosp/android-10.0.0_r38' into ten <5 days ago> [747b171]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Manifest for Android 10.0.0 Release 38 (QQ3A.200605.002) <5 days ago> [887567f]
+by: The Android Open Source Project (initial-contribution@android.com)
+Manifest for Android 10.0.0 Release 37 (QQ3A.200605.001) <5 days ago> [fea4547]
+by: The Android Open Source Project (initial-contribution@android.com)
+Manifest for android10-qpr3-release. <5 days ago> [a3b2879]
+by: The Android Open Source Project (initial-contribution@android.com)
+
+[build/make]
+Merge tag 'android-10.0.0_r38' of https://android.googlesource.com/platform/build into HEAD <5 days ago> [cf1c345]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[build/soong]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [2116267]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/av]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [dac19d3]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/native]
+Merge tag 'android-10.0.0_r38' into ten <5 days ago> [e1aaff4]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "surfaceflinger: Merge caf changes" <5 days ago> [7ed1e5b]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "SurfaceFlinger: Exclude CAF extensions from non-QC devices" <5 days ago> [7adc5f8]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "surfaceflinger: Exclude qcom code on unsupported platforms" <5 days ago> [dd54644]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "surfaceflinger: Exclude qcom RefreshRateType changes" <5 days ago> [6c18ac5]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/opt/net/wifi]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [0bfcebd]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/opt/telephony]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [0c53a4c]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[hardware/interfaces]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [585f129]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/Bluetooth]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [22c7826]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/CellBroadcastReceiver]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [b882329]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/CertInstaller]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [13eeae9]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/Nfc]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [268bc29]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/PhoneCommon]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [0da2d9a]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/Settings]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [3bb80e9]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/providers/DownloadProvider]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [28ead7d]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/services/Telecomm]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [f002902]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/services/Telephony]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [c74f2b0]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[system/bt]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [98af46a]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[system/core]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [ad679fb]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[system/sepolicy]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [680109d]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[system/vold]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [425481d]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[build/make]
+Merge tag 'android-10.0.0_r38' of https://android.googlesource.com/platform/build into HEAD <5 days ago> [cf1c345]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[system/sepolicy]
+Merge tag 'android-10.0.0_r38' into staging/ten-android-10.0.0_r38 <5 days ago> [680109d]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/native]
+Merge tag 'android-10.0.0_r38' into ten <5 days ago> [e1aaff4]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "surfaceflinger: Merge caf changes" <5 days ago> [7ed1e5b]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "SurfaceFlinger: Exclude CAF extensions from non-QC devices" <5 days ago> [7adc5f8]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "surfaceflinger: Exclude qcom code on unsupported platforms" <5 days ago> [dd54644]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+Revert "surfaceflinger: Exclude qcom RefreshRateType changes" <5 days ago> [6c18ac5]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+
+====================
+     06-01-2020
+====================
+
+[packages/apps/DerpQuest]
+DerpQuest: Update Greek translation (#62,#64) <9 days ago> [27bce52]
+by: CrisBalGreece (crisbaladim@yahoo.gr)
+DerpQuest: Make TwoTargetPreference divider slimmer <13 days ago> [57f2660]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Allow showing SB ticker for media [2/2] <2 weeks ago> [bedcab2]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Bring back good ol' circle battery style [2/2] <4 months ago> [6c831d1]
+by: Luca Stefani (luca.stefani.ge1@gmail.com)
 
 
