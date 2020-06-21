@@ -1,236 +1,163 @@
 ====================
-     06-14-2020
+     06-21-2020
 ====================
-
-[frameworks/base]
-base: Add DND & Rate settings to flash on call [1/3] <15 hours ago> [341c337]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-base: Allow to flash on call only when entirely silent [1/3] <3 days ago> [6372450]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/services/Telecomm]
-Telecomm: Add DND & Rate settings to flash on call [2/3] <15 hours ago> [a78325f]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Telecomm: Allow to flash on call only when entirely silent [2/3] <3 days ago> [570b067]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/apps/DerpQuest]
-DerpQuest: Add DND & Rate settings to flash on call [3/3] <15 hours ago> [444ca92]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow to flash on call only when entirely silent [3/3] <3 days ago> [84a1cb0]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-
-====================
-     06-13-2020
-====================
-
-[frameworks/base]
-base: Add DND & Rate settings to flash on call [1/3] <13 hours ago> [341c337]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-base: Allow to flash on call only when entirely silent [1/3] <3 days ago> [6372450]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/apps/Settings]
-Settings: Randomize DerpQuest's summary <23 hours ago> [4003d4c]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/services/Telecomm]
-Telecomm: Add DND & Rate settings to flash on call [2/3] <13 hours ago> [a78325f]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Telecomm: Allow to flash on call only when entirely silent [2/3] <3 days ago> [570b067]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[packages/apps/DerpQuest]
-DerpQuest: Add DND & Rate settings to flash on call [3/3] <13 hours ago> [444ca92]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-DerpQuest: Allow to flash on call only when entirely silent [3/3] <3 days ago> [84a1cb0]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-
-
-====================
-     06-12-2020
-====================
-
-[manifest]
-manifest: Track msm8998 audio HAL from poad <2 days ago> [089cfdc]
-by: Ido Ben-Hur (idoybh2@gmail.com)
 
 [packages/apps/Matlog]
-MatLog: create better widget images <2 days ago> [a2d513f]
+Merge "MatLog: cleanup unneded strings" into android-10 <17 hours ago> [7f32560]
+by: Max Weninger (max.weninger@gmail.com)
+MatLog: cleanup unneded strings <18 hours ago> [0db5768]
 by: maxwen (max.weninger@gmail.com)
 
-[packages/apps/Settings]
-Settings: Add RU translation for vibration patterns (#15) <2 days ago> [fa5da95]
-by: RunningMango (36758157+RunningMango@users.noreply.github.com)
+[prebuilts/clang/host/linux-x86]
+Update prebuilt Clang to r383902c. <2 days ago> [a7ae3f9]
+by: Stephen Hines (srhines@google.com)
 
-[packages/apps/OpenDelta]
-OpenDelta: Update RU translation (#2) <2 days ago> [ec93023]
-by: RunningMango (36758157+RunningMango@users.noreply.github.com)
-
-[packages/apps/OpenDelta]
-OpenDelta: Update RU translation (#2) <2 days ago> [ec93023]
-by: RunningMango (36758157+RunningMango@users.noreply.github.com)
-
-[hardware/sony/timekeep]
-timekeep: Move app back to system <29 hours ago> [00e121a]
-by: LuK1337 (priv.luk@gmail.com)
+[vendor/motorola]
+lux: hex-edit camera binaries to read fake build.prop (Reprise) Some camera libraries (such as Morpho HDR) try to open /system/build.prop and check that it contains `ro.product.manufacturer=Motorola`. On Oreo, the build.prop is readable only by root, so this fails. These libraries deliberately crash in strange ways when they fail to read build.prop. To work around these, I hex edited the libraries to use `/vendor/hacks.prop` (that I created as world readable) instead of `/system/build.prop`. <1 year, 5 months ago> [72dac34]
+by: Sultan Qasim Khan (sultanqasim@lineageos.org)
 
 
 ====================
-     06-11-2020
+     06-20-2020
+====================
+
+[build/make]
+build: remove $(PRODUCT_OUT)/recovery/root on build <5 months ago> [c2b76f8]
+by: kessaras (theodoroupaulos@gmail.com)
+
+[build/make]
+build: remove $(PRODUCT_OUT)/recovery/root on build <5 months ago> [c2b76f8]
+by: kessaras (theodoroupaulos@gmail.com)
+
+[vendor/motorola]
+chef: Use some ACDB from lake <2 days ago> [5226443]
+by: Rohan Hasabe (rohanhasabe8@gmail.com)
+chef: Update blobS to QPTS30.61-18-12 <4 days ago> [e835e56]
+by: Rohan Hasabe (rohanhasabe8@gmail.com)
+
+
+====================
+     06-19-2020
 ====================
 
 [frameworks/base]
-Add Flashlight blink on incoming calls [1/3] <6 months ago> [0a48c08]
-by: PMS22 (pratham220399@gmail.com)
-Revert "Added features flash-call-on-waiting [1/3]" <3 days ago> [ff28d93]
-by: Ido Ben-Hur (idoybh2@gmail.com)
+SystemUI: arrow keys while typing resurrection [1/2] <6 months ago> [b034c56]
+by: maxwen (max.weninger@gmail.com)
+
+[packages/apps/Matlog]
+Automatic translation import <2 days ago> [49007ec]
+by: maxwen (max.weninger@gmail.com)
 
 [packages/apps/DerpQuest]
-DerpQuest: Add Flashlight blink on incoming calls [3/3] <2 years ago> [8cd4cff]
-by: PMS22 (prathams99@rediff.com)
+DerpQuest: One navbar switch to rule them all <2 days ago> [2ca1dca]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+DerpQuest: Arrow keys while typing resurrection [2/2] <3 days ago> [7d61217]
+by: maxwen (max.weninger@gmail.com)
+
+[vendor/motorola]
+msm8916-common: Hex-edit thermal-engine to load config from vendor <1 year, 10 months ago> [fed7999]
+by: SubhrajyotiSen (subhrajyoti12@gmail.com)
 
 
 ====================
-     06-10-2020
+     06-18-2020
 ====================
-
-[external/selinux]
-Don't require seinfo for privapps <7 months ago> [902ed15]
-by: Ashwini Oruganti (ashfall@google.com)
-
-[packages/apps/DeskClock]
-DeskClock: Modernize timer_setup_time look <11 days ago> [9cf6ae6]
-by: LuK1337 (priv.luk@gmail.com)
-DeskClock: Update drawables <12 days ago> [5a66653]
-by: LuK1337 (priv.luk@gmail.com)
-Revert "Remove max aspect ratio." <8 days ago> [9492a4f]
-by: Wang Han (416810799@qq.com)
-Import translations. DO NOT MERGE <5 months ago> [a5cb332]
-by: Bill Yi (byi@google.com)
-Import translations. DO NOT MERGE <9 months ago> [4af9d0e]
-by: Bill Yi (byi@google.com)
-AOSP/DeskClock - Added SET_ALARM permission check <5 weeks ago> [7aca2eb]
-by: Colin Marsch (colinmarsch@google.com)
-AOSP/DeskClock - Updated to sdkVersion 29. <7 weeks ago> [42973c4]
-by: Raman Tenneti (rtenneti@google.com)
-AOSP/DeskClock - Updated to sdkVersion 29. <7 months ago> [960dd5c]
-by: Raman Tenneti (rtenneti@google.com)
 
 [packages/apps/Dialer]
-Automatic translation import <3 days ago> [eb38e13]
+Automatic translation import <4 days ago> [f12f25c]
 by: Akhil Narang (akhilnarang.1999@gmail.com)
 
 [packages/apps/Launcher3]
-Automatic translation import <3 days ago> [5261213]
+Automatic translation import <4 days ago> [9aa8331]
 by: Akhil Narang (akhilnarang.1999@gmail.com)
 
-[packages/services/Telecomm]
-Telecomm: Add Flashlight blink on incoming calls [2/3] <2 years ago> [74510c7]
-by: Shripal17 (shripal17@gmail.com)
-Revert "Added features flash-call-on-waiting [2/3]" <3 days ago> [d0c0832]
+[packages/apps/OpenDelta]
+OpenDelta: force white text on colored buttons <12 days ago> [9e22ef7]
+by: maxwen (max.weninger@gmail.com)
+
+
+====================
+     06-17-2020
+====================
+
+[frameworks/base]
+SystemUI: Update custom carrier label position correctly <5 days ago> [3a3da3f]
 by: Ido Ben-Hur (idoybh2@gmail.com)
+overlays: Fix inactive state Wifi Icon in Circular & Filled Icon Pack <5 days ago> [eb79aa4]
+by: Aman Singh (amankumarsingh1412@gmail.com)
 
 [packages/apps/DerpQuest]
-DerpQuest: Remove flash-on-call settings in favor of new one <3 days ago> [64e366f]
+DerpQuest: Update RU translation (#67) <5 days ago> [fd0d485]
+by: RunningMango (36758157+RunningMango@users.noreply.github.com)
+
+[packages/apps/OpenDelta]
+OpenDelta: Fix RU translation (#3) <5 days ago> [d899ff5]
+by: RunningMango (36758157+RunningMango@users.noreply.github.com)
+
+[scripts]
+scripts: updater: Support new info.sh <7 days ago> [8b01ddf]
 by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/OpenDelta]
+OpenDelta: Fix RU translation (#3) <5 days ago> [d899ff5]
+by: RunningMango (36758157+RunningMango@users.noreply.github.com)
 
 
 ====================
-     06-09-2020
+     06-16-2020
 ====================
 
-[manifest]
-manifest: Track our own sm8150 display HAL <4 days ago> [beacdbe]
+[frameworks/base]
+FODCircleView: Add support for pressed fod layer <4 weeks ago> [03e0b11]
+by: TheScarastic (warabhishek@gmail.com)
+Revert "FODCircleView: dispatch onPress to HAL only after dimming is applied" <7 days ago> [85cf4e7]
 by: Ido Ben-Hur (idoybh2@gmail.com)
-
-[frameworks/native]
-commonsys-intf: display: Add frame extn interface. <12 months ago> [e557b93]
-by: Rajavenu Kyatham (rkyatham@codeaurora.org)
-commonsys-intf: display: Add extension interfaces <4 months ago> [c0d7e01]
-by: Karthi Kandasmay (kartka@codeaurora.org)
-sf: avoid assumption remote binder is local <3 months ago> [0fb28f9]
-by: Steven Moreland (smoreland@google.com)
-DO NOT MERGE: SF: fix SurfaceFlinger freeze <4 months ago> [2ccc31d]
-by: Marissa Wall (marissaw@google.com)
-sf: Fix issue with dequeueBuffer when multiple display present <1 year, 9 months ago> [43182d5]
-by: Baldev Sahu (bsahu@codeaurora.org)
-SurfaceFlinger: Exclude CAF extensions from non-QC devices <11 months ago> [ca153e2]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-surfaceflinger: Merge caf changes <8 days ago> [eb46e55]
-by: Adhitya Mohan (me@adhityamohan.in)
+SystemUI: Long press Caffeine for infinite duration <4 weeks ago> [073c1cb]
+by: chillger (alexander.loskutov@gmail.com)
 
 [hardware/qcom-caf/sm8150/display]
-commonsys-intf: display: Update SmoMo interface <9 months ago> [a5ec268]
-by: Ray Zhang (rayz@codeaurora.org)
-
-[packages/apps/Settings]
-Settings: Fix IndexOutOfBound error on bt codec selection <2 weeks ago> [4c9ac68]
-by: rituj (ritujbeniwal@gmail.com)
-
-[frameworks/native]
-commonsys-intf: display: Add frame extn interface. <12 months ago> [e557b93]
-by: Rajavenu Kyatham (rkyatham@codeaurora.org)
-commonsys-intf: display: Add extension interfaces <4 months ago> [c0d7e01]
-by: Karthi Kandasmay (kartka@codeaurora.org)
-sf: avoid assumption remote binder is local <3 months ago> [0fb28f9]
-by: Steven Moreland (smoreland@google.com)
-DO NOT MERGE: SF: fix SurfaceFlinger freeze <4 months ago> [2ccc31d]
-by: Marissa Wall (marissaw@google.com)
-sf: Fix issue with dequeueBuffer when multiple display present <1 year, 9 months ago> [43182d5]
-by: Baldev Sahu (bsahu@codeaurora.org)
-SurfaceFlinger: Exclude CAF extensions from non-QC devices <11 months ago> [ca153e2]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-surfaceflinger: Merge caf changes <8 days ago> [eb46e55]
-by: Adhitya Mohan (me@adhityamohan.in)
-
-[frameworks/native]
-commonsys-intf: display: Add frame extn interface. <12 months ago> [e557b93]
-by: Rajavenu Kyatham (rkyatham@codeaurora.org)
-commonsys-intf: display: Add extension interfaces <4 months ago> [c0d7e01]
-by: Karthi Kandasmay (kartka@codeaurora.org)
-sf: avoid assumption remote binder is local <3 months ago> [0fb28f9]
-by: Steven Moreland (smoreland@google.com)
-DO NOT MERGE: SF: fix SurfaceFlinger freeze <4 months ago> [2ccc31d]
-by: Marissa Wall (marissaw@google.com)
-sf: Fix issue with dequeueBuffer when multiple display present <1 year, 9 months ago> [43182d5]
-by: Baldev Sahu (bsahu@codeaurora.org)
-SurfaceFlinger: Exclude CAF extensions from non-QC devices <11 months ago> [ca153e2]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
-surfaceflinger: Merge caf changes <8 days ago> [eb46e55]
-by: Adhitya Mohan (me@adhityamohan.in)
-
-
-====================
-     06-08-2020
-====================
-
-[frameworks/base]
-SystemUI: Adapt screenshot sound to ringer modes <2 weeks ago> [a111fb4]
-by: Ashwin R C (ashwin2001achu@gmail.com)
-
-[packages/apps/Settings]
-Settings: Preview the custom ringtone vibration pattern <6 days ago> [ae68a60]
-by: Ido Ben-Hur (idoybh2@gmail.com)
-Settings: Hide settings version from carrier settings if unsupported <7 days ago> [c9b9bef]
-by: Ido Ben-Hur (idoybh2@gmail.com)
+sdm: mark FOD pressed layer by setting a bit on ZPOS <4 weeks ago> [f5e564c]
+by: Demon000 (demonsingur@gmail.com)
 
 [packages/services/Telecomm]
-Telecomm: Allow choosing a custom vibration pattern [2/3] <8 days ago> [f51a084]
-by: Ido Ben-Hur (idoybh2@gmail.co
+Telecomm: Add a null check to custom ring vibration <6 days ago> [42ac021]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[packages/apps/DerpQuest]
+DerpQuest: Actually save carrier label placement setting <5 days ago> [002ac9f]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[vendor/motorola]
+msm8916-common: Update Graphics blobs from paella 5.1.0 release <11 days ago> [b42268a]
+by: althafvly (althafvly@gmail.com)
 
 
 ====================
-     06-07-2020
+     06-15-2020
 ====================
 
 [frameworks/base]
-VolumeDialog: Fix live caption button when on left side <10 days ago> [0dfd8ef]
-by: jhenrique09 (jhenrique09.mcz@hotmail.com)
+overlays: Tint all power menu icons with the system accent <9 weeks ago> [45303e3]
+by: spezi77 (spezi7713@gmx.net)
 
-[packages/apps/DerpQuest]
-DerpQuest: Add drill <3 years, 4 months ago> [950164a]
-by: Pranav Vashi (neobuddy89@gmail.com
+[frameworks/native]
+surfaceflinger: change usageBits type to uint64_t <3 weeks ago> [845990e]
+by: Pierre-Hugues Husson (phhusson@gmail.com)
+surfaceflinger: Add support for extension lib <4 weeks ago> [20c395d]
+by: Pierre-Hugues Husson (phh@phh.me)
+
+[vendor/aosip]
+soong: Add flag for fod extension <4 weeks ago> [85562ad]
+by: TheScarastic (warabhishek@gmail.com)
+
+[scripts]
+scripts: updater: Adapt to new file host <8 days ago> [90f5d07]
+by: Ido Ben-Hur (idoybh2@gmail.com)
+
+[frameworks/native]
+surfaceflinger: change usageBits type to uint64_t <3 weeks ago> [845990e]
+by: Pierre-Hugues Husson (phhusson@gmail.com)
+surfaceflinger: Add support for extension lib <4 weeks ago> [20c395d]
+by: Pierre-Hugues Husson (phh@phh.me)
 
 
